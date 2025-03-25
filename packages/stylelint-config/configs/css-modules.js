@@ -18,6 +18,15 @@ export default {
       },
     ],
 
+    // The default is kebab-case, but change it to camelCase for better compatibility with JSX.
+    // https://stylelint.io/user-guide/rules/selector-class-pattern/
+    'selector-class-pattern': [
+      '^[_a-z]+([A-Z][a-z]*)*$',
+      {
+        message: 'Expected class selector to be camelCase',
+      },
+    ],
+
     // https://stylelint.io/user-guide/rules/selector-pseudo-class-no-unknown/
     'selector-pseudo-class-no-unknown': [
       true,
