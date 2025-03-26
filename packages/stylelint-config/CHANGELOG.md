@@ -1,3 +1,13 @@
+## [stylelint-config-moneyforward-v2.0.0](https://github.com/moneyforward/frontend-tools/compare/stylelint-config-moneyforward-v1.0.0...stylelint-config-moneyforward-v2.0.0) (2025-03-26)
+
+### ⚠ BREAKING CHANGES
+
+* **stylelint-config:** change `selector-class-pattern` from `kebab-case` to `camelCase` (#369)
+
+### Features
+
+* **stylelint-config:** change `selector-class-pattern` from `kebab-case` to `camelCase` ([#369](https://github.com/moneyforward/frontend-tools/issues/369)) ([b7f5467](https://github.com/moneyforward/frontend-tools/commit/b7f5467a5a73cd184c77d8241e42c8c9ee3d90bc))
+
 ## stylelint-config-moneyforward-v1.0.0 (2025-02-13)
 
 ### Features
