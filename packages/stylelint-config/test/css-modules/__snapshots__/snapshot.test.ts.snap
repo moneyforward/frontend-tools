@@ -827,9 +827,9 @@ exports[`should match Stylelint Configuration snapshot: css-modules 1`] = `
       "always",
     ],
     "selector-class-pattern": [
-      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      "^[_a-z]+([A-Z][a-z]*)*$",
       {
-        "message": [Function],
+        "message": "Expected class selector to be camelCase",
       },
     ],
     "selector-id-pattern": [
