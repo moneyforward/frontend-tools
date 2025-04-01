@@ -5,11 +5,11 @@
   "type": "module",
   "engines": {
     "node": "22.13.1",
-    "pnpm": "9.15.1",
+    "pnpm": "9.15.9",
     "npm": "please use pnpm instead",
     "yarn": "please use pnpm instead"
   },
-  "packageManager": "pnpm@9.15.1",
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
     "format": "prettier -c './**/*.@(js|cjs|ts|tsx|md)' -w",
     "eslint-config": "   pnpm -F 'eslint-config-moneyforward'",
