@@ -48,7 +48,7 @@
     "semantic-release": "24.2.5",
     "stylelint": "16.19.1",
     "typescript": "5.7.3",
-    "vitest": "3.0.9"
+    "vitest": "3.1.4"
   },
   "peerDependencies": {
     "stylelint": "^16.13.0"
