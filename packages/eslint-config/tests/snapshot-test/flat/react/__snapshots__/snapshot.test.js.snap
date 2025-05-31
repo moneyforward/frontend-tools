@@ -497,6 +497,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
       {
         "enforceForClassFields": true,
         "exceptMethods": [],
+        "ignoreOverrideMethods": false,
       },
     ],
     "complexity": [
@@ -2090,6 +2091,9 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
     ],
     "no-shadow-restricted-names": [
       2,
+      {
+        "reportGlobalThis": false,
+      },
     ],
     "no-sparse-arrays": [
       2,
@@ -2175,6 +2179,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
         "allowTaggedTemplates": true,
         "allowTernary": true,
         "enforceForJSX": false,
+        "ignoreDirectives": false,
       },
     ],
     "no-unused-labels": [
@@ -2223,6 +2228,9 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-useless-rename": [
       2,
