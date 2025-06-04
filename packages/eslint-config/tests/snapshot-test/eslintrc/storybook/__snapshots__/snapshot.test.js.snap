@@ -2443,6 +2443,9 @@ exports[`should match ESLint configuration snapshot: storybook 1`] = `
     "storybook/no-redundant-story-name": [
       1,
     ],
+    "storybook/no-renderer-packages": [
+      0,
+    ],
     "storybook/no-stories-of": [
       2,
     ],
