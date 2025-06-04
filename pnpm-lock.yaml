@@ -60,7 +60,7 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0(eslint@9.28.0)
       eslint-plugin-storybook:
-        specifier: ^9.0.0
+        specifier: ^9.0.4
         version: 9.0.4(eslint@9.28.0)(storybook@9.0.4(@testing-library/dom@10.4.0)(prettier@3.5.3))(typescript@5.8.3)
       eslint-plugin-testing-library:
         specifier: ^7.0.0

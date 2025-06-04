@@ -2,6 +2,10 @@ module.exports = {
   plugins: ['storybook'],
   extends: ['plugin:storybook/recommended'],
   rules: {
+    // Turn off this rule because type definitions such as `Meta` and `StoryObj` need to be imported from `@storybook/react`.
+    // https://github.com/storybookjs/storybook/blob/next/code/lib/eslint-plugin/docs/rules/no-renderer-packages.md
+    'storybook/no-renderer-packages': ['off'],
+
     // `storiesOf` is deprecated and should not be used
     // https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/no-stories-of.md
     // Since Storybook 5.2, the CSF format was introduced and the storiesOf API has been deprecated.

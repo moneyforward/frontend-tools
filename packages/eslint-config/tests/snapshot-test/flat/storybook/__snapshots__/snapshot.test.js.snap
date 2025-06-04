@@ -2672,6 +2672,9 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
     "storybook/no-redundant-story-name": [
       1,
     ],
+    "storybook/no-renderer-packages": [
+      2,
+    ],
     "storybook/no-stories-of": [
       2,
     ],
