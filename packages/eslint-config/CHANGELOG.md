@@ -1,3 +1,10 @@
+## [eslint-config-moneyforward-v5.1.1](https://github.com/moneyforward/frontend-tools/compare/5.1.0...5.1.1) (2025-06-04)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-import-resolver-typescript to v4 ([#385](https://github.com/moneyforward/frontend-tools/issues/385)) ([3d1c9a6](https://github.com/moneyforward/frontend-tools/commit/3d1c9a6fd4a2a80eb5549b89e5d7d8624d99f032))
+* **deps:** update dependency eslint-plugin-storybook to v9 ([#386](https://github.com/moneyforward/frontend-tools/issues/386)) ([a522438](https://github.com/moneyforward/frontend-tools/commit/a522438a516a53c10243b65cfb3bfd8e5003bd8a))
+
 ## [eslint-config-moneyforward-v5.1.0](https://github.com/moneyforward/frontend-tools/compare/5.0.2...5.1.0) (2025-02-13)
 
 ### Features
