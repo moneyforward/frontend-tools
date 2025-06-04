@@ -2673,7 +2673,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
       1,
     ],
     "storybook/no-renderer-packages": [
-      2,
+      0,
     ],
     "storybook/no-stories-of": [
       2,
