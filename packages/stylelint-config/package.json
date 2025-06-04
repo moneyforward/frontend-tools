@@ -47,7 +47,7 @@
     "eslint-config-moneyforward": "workspace:*",
     "semantic-release": "24.2.5",
     "stylelint": "16.20.0",
-    "typescript": "5.7.3",
+    "typescript": "5.8.3",
     "vitest": "3.1.4"
   },
   "peerDependencies": {
