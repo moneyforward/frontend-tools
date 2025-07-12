@@ -178,7 +178,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
       2,
     ],
     "@typescript-eslint/no-deprecated": [
-      2,
+      1,
     ],
     "@typescript-eslint/no-duplicate-enum-values": [
       2,
@@ -497,7 +497,6 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
       {
         "enforceForClassFields": true,
         "exceptMethods": [],
-        "ignoreOverrideMethods": false,
       },
     ],
     "complexity": [
@@ -566,7 +565,6 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
       "expression",
       {
         "allowArrowFunctions": false,
-        "allowTypeAnnotation": false,
         "overrides": {},
       },
     ],
@@ -1844,16 +1842,11 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
         "allow": [],
         "builtinGlobals": false,
         "hoist": "functions",
-        "ignoreFunctionTypeParameterNameValueShadow": true,
         "ignoreOnInitialization": false,
-        "ignoreTypeValueShadow": true,
       },
     ],
     "no-shadow-restricted-names": [
       2,
-      {
-        "reportGlobalThis": false,
-      },
     ],
     "no-sparse-arrays": [
       2,
@@ -1939,7 +1932,6 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
         "allowTaggedTemplates": true,
         "allowTernary": true,
         "enforceForJSX": false,
-        "ignoreDirectives": false,
       },
     ],
     "no-unused-labels": [
@@ -1961,10 +1953,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
       {
         "allowNamedExports": false,
         "classes": true,
-        "enums": true,
         "functions": true,
-        "ignoreTypeReferences": true,
-        "typedefs": true,
         "variables": true,
       },
     ],
@@ -1991,9 +1980,6 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
     ],
     "no-useless-escape": [
       2,
-      {
-        "allowRegexCharacters": [],
-      },
     ],
     "no-useless-rename": [
       2,
