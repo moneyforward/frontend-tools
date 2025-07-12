@@ -22,6 +22,10 @@ module.exports = {
     // https://typescript-eslint.io/rules/dot-notation/
     '@typescript-eslint/dot-notation': baseBestPracticesRules['dot-notation'],
 
+    // Use of `@deprecated` tag should be acceptable during code migration.
+    // https://typescript-eslint.io/rules/no-deprecated/
+    '@typescript-eslint/no-deprecated': ['warn'],
+
     // Disallow unused expressions.
     // https://typescript-eslint.io/rules/no-unused-expressions/
     // Replace 'no-unused-expressions' rule with '@typescript-eslint' version

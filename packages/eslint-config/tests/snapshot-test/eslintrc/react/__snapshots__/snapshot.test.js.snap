@@ -95,7 +95,7 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
       2,
     ],
     "@typescript-eslint/no-deprecated": [
-      2,
+      1,
     ],
     "@typescript-eslint/no-duplicate-enum-values": [
       2,
