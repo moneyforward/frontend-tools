@@ -3,7 +3,7 @@
 exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configuration snapshot: next 1`] = `
 {
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "globals": {
       "AggregateError": false,
       "Array": false,
@@ -1529,6 +1529,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
     "no-duplicate-imports": [
       0,
       {
+        "allowSeparateTypeImports": false,
         "includeExports": false,
       },
     ],
