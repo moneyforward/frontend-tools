@@ -3,7 +3,7 @@
 exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
 {
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "globals": {
       "AggregateError": false,
       "Array": false,
@@ -249,8 +249,8 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
           "attributes",
         ],
         "ExportSpecifier": [
-          "exported",
           "local",
+          "exported",
         ],
         "ExpressionStatement": [
           "expression",
@@ -463,7 +463,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
           "argument",
         ],
       },
-      "latestEcmaVersion": 16,
+      "latestEcmaVersion": 17,
       "name": "espree",
       "parse": [Function],
       "supportedEcmaVersions": [
@@ -480,9 +480,10 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
         14,
         15,
         16,
+        17,
       ],
       "tokenize": [Function],
-      "version": "10.3.0",
+      "version": "10.4.0",
     },
     "parserOptions": {
       "ecmaVersion": "latest",
@@ -1084,6 +1085,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
     "no-duplicate-imports": [
       0,
       {
+        "allowSeparateTypeImports": false,
         "includeExports": false,
       },
     ],
