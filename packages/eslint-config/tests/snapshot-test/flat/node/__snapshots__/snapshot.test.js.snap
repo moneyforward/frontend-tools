@@ -556,6 +556,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
       {
         "enforceForClassFields": true,
         "exceptMethods": [],
+        "ignoreOverrideMethods": false,
       },
     ],
     "complexity": [
@@ -624,6 +625,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
       "expression",
       {
         "allowArrowFunctions": false,
+        "allowTypeAnnotation": false,
         "overrides": {},
       },
     ],
@@ -1691,11 +1693,16 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
         "allow": [],
         "builtinGlobals": false,
         "hoist": "functions",
+        "ignoreFunctionTypeParameterNameValueShadow": true,
         "ignoreOnInitialization": false,
+        "ignoreTypeValueShadow": true,
       },
     ],
     "no-shadow-restricted-names": [
       2,
+      {
+        "reportGlobalThis": false,
+      },
     ],
     "no-sparse-arrays": [
       2,
@@ -1781,6 +1788,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
         "allowTaggedTemplates": true,
         "allowTernary": true,
         "enforceForJSX": false,
+        "ignoreDirectives": false,
       },
     ],
     "no-unused-labels": [
@@ -1802,7 +1810,10 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
       {
         "allowNamedExports": false,
         "classes": true,
+        "enums": true,
         "functions": true,
+        "ignoreTypeReferences": true,
+        "typedefs": true,
         "variables": true,
       },
     ],
@@ -1829,6 +1840,9 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-useless-rename": [
       2,
