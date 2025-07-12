@@ -1,3 +1,9 @@
+## [eslint-config-moneyforward-v5.1.2](https://github.com/moneyforward/frontend-tools/compare/5.1.1...5.1.2) (2025-07-12)
+
+### Bug Fixes
+
+* **frontend:** accept using `[@deprecated](https://github.com/deprecated)` tag in JSDoc ([#389](https://github.com/moneyforward/frontend-tools/issues/389)) ([652b1ef](https://github.com/moneyforward/frontend-tools/commit/652b1ef4bf8543b7b1628c440df7b0ee5abbfb33))
+
 ## [eslint-config-moneyforward-v5.1.1](https://github.com/moneyforward/frontend-tools/compare/5.1.0...5.1.1) (2025-06-04)
 
 ### Bug Fixes

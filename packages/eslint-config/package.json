@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-moneyforward",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Money Forward's ESLint rules as an extensible shared config.",
   "exports": {
     "./flat": {
