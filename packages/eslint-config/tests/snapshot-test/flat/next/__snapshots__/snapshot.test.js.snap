@@ -499,6 +499,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
       0,
       {
         "enforceForClassMembers": true,
+        "enforceForTSTypes": false,
         "getWithoutSet": false,
         "setWithoutGet": true,
       },
@@ -642,6 +643,9 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
     "grouped-accessor-pairs": [
       2,
       "anyOrder",
+      {
+        "enforceForTSTypes": false,
+      },
     ],
     "guard-for-in": [
       2,

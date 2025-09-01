@@ -496,6 +496,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
       0,
       {
         "enforceForClassMembers": true,
+        "enforceForTSTypes": false,
         "getWithoutSet": false,
         "setWithoutGet": true,
       },
@@ -639,6 +640,9 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
     "grouped-accessor-pairs": [
       2,
       "anyOrder",
+      {
+        "enforceForTSTypes": false,
+      },
     ],
     "guard-for-in": [
       2,
