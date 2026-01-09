@@ -1261,6 +1261,9 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       2,
@@ -2023,6 +2026,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
     ],
     "require-unicode-regexp": [
       0,
+      {},
     ],
     "sort-imports": [
       0,
