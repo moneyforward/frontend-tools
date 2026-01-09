@@ -27,6 +27,6 @@
   "homepage": "https://github.com/moneyforward/frontend-tools#readme",
   "devDependencies": {
     "prettier": "3.6.2",
-    "prettier-plugin-organize-imports": "4.1.0"
+    "prettier-plugin-organize-imports": "4.3.0"
   }
 }
