@@ -1705,6 +1705,9 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       2,
@@ -2932,6 +2935,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Flat Configurat
     ],
     "require-unicode-regexp": [
       0,
+      {},
     ],
     "sort-imports": [
       0,
