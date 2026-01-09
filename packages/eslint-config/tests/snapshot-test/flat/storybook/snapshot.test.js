@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prefer-module */
 const { getESLintConfig } = require('../../helper');
 
 describe('ESLint Configuration Snapshot Tests', () => {
