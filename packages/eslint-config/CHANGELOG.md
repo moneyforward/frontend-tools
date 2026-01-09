@@ -1,3 +1,9 @@
+## [eslint-config-moneyforward-v5.1.3](https://github.com/moneyforward/frontend-tools/compare/5.1.2...5.1.3) (2026-01-09)
+
+### Bug Fixes
+
+* **eslint-config:** update React ESLint plugins and pin dependency versions ([#400](https://github.com/moneyforward/frontend-tools/issues/400)) ([deaf61d](https://github.com/moneyforward/frontend-tools/commit/deaf61d6bd08c959484509c69cf3c326b3131f9e))
+
 ## [eslint-config-moneyforward-v5.1.2](https://github.com/moneyforward/frontend-tools/compare/5.1.1...5.1.2) (2025-07-12)
 
 ### Bug Fixes
