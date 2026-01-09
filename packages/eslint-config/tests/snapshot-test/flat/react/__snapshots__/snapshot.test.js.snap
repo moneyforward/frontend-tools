@@ -1642,6 +1642,9 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       2,
@@ -2869,6 +2872,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
     ],
     "require-unicode-regexp": [
       0,
+      {},
     ],
     "sort-imports": [
       0,
