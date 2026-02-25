@@ -1,3 +1,9 @@
+## [stylelint-config-moneyforward-v2.0.1](https://github.com/moneyforward/frontend-tools/compare/stylelint-config-moneyforward-v2.0.0...stylelint-config-moneyforward-v2.0.1) (2026-02-25)
+
+### Bug Fixes
+
+* **deps:** upgrade semantic-release to v25 for OIDC support ([#404](https://github.com/moneyforward/frontend-tools/issues/404)) ([43bef55](https://github.com/moneyforward/frontend-tools/commit/43bef550463e86c44e73ece125a43e1732f8411f))
+
 ## [stylelint-config-moneyforward-v2.0.0](https://github.com/moneyforward/frontend-tools/compare/stylelint-config-moneyforward-v1.0.0...stylelint-config-moneyforward-v2.0.0) (2025-03-26)
 
 ### ⚠ BREAKING CHANGES
