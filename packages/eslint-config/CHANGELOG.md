@@ -1,3 +1,10 @@
+## [eslint-config-moneyforward-v5.1.4](https://github.com/moneyforward/frontend-tools/compare/5.1.3...5.1.4) (2026-02-25)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-import-resolver-typescript to v4.4.4 ([#401](https://github.com/moneyforward/frontend-tools/issues/401)) ([9f30343](https://github.com/moneyforward/frontend-tools/commit/9f30343a24eeefa65f85a84859731defcdfd57f9))
+* **deps:** upgrade semantic-release to v25 for OIDC support ([#404](https://github.com/moneyforward/frontend-tools/issues/404)) ([43bef55](https://github.com/moneyforward/frontend-tools/commit/43bef550463e86c44e73ece125a43e1732f8411f))
+
 ## [eslint-config-moneyforward-v5.1.3](https://github.com/moneyforward/frontend-tools/compare/5.1.2...5.1.3) (2026-01-09)
 
 ### Bug Fixes
