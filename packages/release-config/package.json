@@ -7,7 +7,7 @@
   "dependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/npm": "13.1.4",
+    "@semantic-release/npm": "13.1.5",
     "conventional-changelog-conventionalcommits": "9.0.0",
     "semantic-release-monorepo": "8.0.2"
   },
