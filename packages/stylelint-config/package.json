@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/moneyforward/frontend-tools/tree/main/packages/stylelint-config#readme",
   "dependencies": {
-    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-recess-order": "^7.0.0",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-config-standard-scss": "^14.0.0"
   },
