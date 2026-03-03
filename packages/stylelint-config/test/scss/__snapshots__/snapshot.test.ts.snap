@@ -134,6 +134,12 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "block-no-empty": [
       true,
     ],
+    "block-no-redundant-nested-style-rules": [
+      true,
+    ],
+    "color-function-alias-notation": [
+      "without-alpha",
+    ],
     "color-function-notation": [
       "modern",
     ],
@@ -157,6 +163,12 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "comment-no-empty": null,
     "comment-whitespace-inside": [
       "always",
+    ],
+    "container-name-pattern": [
+      "^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
     ],
     "custom-media-pattern": [
       "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
@@ -268,6 +280,12 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
         "message": [Function],
       },
     ],
+    "layer-name-pattern": [
+      "^([a-z][a-z0-9]*)([.-][a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
+    ],
     "length-zero-no-unit": [
       true,
       {
@@ -292,7 +310,13 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
       "context",
     ],
     "media-query-no-invalid": null,
+    "media-type-no-deprecated": [
+      true,
+    ],
     "named-grid-areas-no-invalid": [
+      true,
+    ],
+    "nesting-selector-no-missing-scoping-root": [
       true,
     ],
     "no-descending-specificity": [
@@ -318,6 +342,9 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
           "forward",
         ],
       },
+    ],
+    "no-invalid-position-declaration": [
+      true,
     ],
     "no-irregular-whitespace": [
       true,
@@ -985,6 +1012,9 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
         },
       ],
     ],
+    "property-no-deprecated": [
+      true,
+    ],
     "property-no-unknown": [
       true,
     ],
@@ -1183,6 +1213,9 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
       true,
     ],
     "string-no-newline": [
+      true,
+    ],
+    "syntax-string-no-invalid": [
       true,
     ],
     "unit-no-unknown": [
