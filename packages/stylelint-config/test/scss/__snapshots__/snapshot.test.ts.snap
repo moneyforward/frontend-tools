@@ -18,12 +18,8 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "scss/at-if-closing-brace-newline-after": [Function],
     "scss/at-if-closing-brace-space-after": [Function],
     "scss/at-if-no-null": [Function],
-    "scss/at-import-no-partial-leading-underscore": [Function],
-    "scss/at-import-partial-extension": [Function],
     "scss/at-import-partial-extension-allowed-list": [Function],
-    "scss/at-import-partial-extension-blacklist": [Function],
     "scss/at-import-partial-extension-disallowed-list": [Function],
-    "scss/at-import-partial-extension-whitelist": [Function],
     "scss/at-mixin-argumentless-call-parentheses": [Function],
     "scss/at-mixin-named-arguments": [Function],
     "scss/at-mixin-no-risky-nesting-selector": [Function],
@@ -77,6 +73,7 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "scss/partial-no-import": [Function],
     "scss/percent-placeholder-pattern": [Function],
     "scss/property-no-unknown": [Function],
+    "scss/selector-class-pattern": [Function],
     "scss/selector-nest-combinators": [Function],
     "scss/selector-no-redundant-nesting-selector": [Function],
     "scss/selector-no-union-class-name": [Function],
@@ -95,12 +92,8 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
       },
     ],
     "annotation-no-unknown": null,
-    "at-rule-descriptor-no-unknown": [
-      true,
-    ],
-    "at-rule-descriptor-value-no-unknown": [
-      true,
-    ],
+    "at-rule-descriptor-no-unknown": null,
+    "at-rule-descriptor-value-no-unknown": null,
     "at-rule-empty-line-before": [
       "always",
       {
@@ -123,14 +116,7 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "at-rule-no-vendor-prefix": [
       true,
     ],
-    "at-rule-prelude-no-invalid": [
-      true,
-      {
-        "ignoreAtRules": [
-          "media",
-        ],
-      },
-    ],
+    "at-rule-prelude-no-invalid": null,
     "block-no-empty": [
       true,
     ],
@@ -234,9 +220,7 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "declaration-property-value-keyword-no-deprecated": [
       true,
     ],
-    "declaration-property-value-no-unknown": [
-      true,
-    ],
+    "declaration-property-value-no-unknown": null,
     "font-family-name-quotes": [
       "always-where-recommended",
     ],
@@ -292,6 +276,10 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
         "ignore": [
           "custom-properties",
         ],
+        "ignorePreludeOfAtRules": [
+          "function",
+          "mixin",
+        ],
       },
     ],
     "lightness-notation": [
@@ -303,9 +291,7 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "media-feature-name-no-vendor-prefix": [
       true,
     ],
-    "media-feature-name-value-no-unknown": [
-      true,
-    ],
+    "media-feature-name-value-no-unknown": null,
     "media-feature-range-notation": [
       "context",
     ],
@@ -318,16 +304,17 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     ],
     "nesting-selector-no-missing-scoping-root": [
       true,
+      {
+        "ignoreAtRules": [
+          "mixin",
+        ],
+      },
     ],
-    "no-descending-specificity": [
-      true,
-    ],
+    "no-descending-specificity": null,
     "no-duplicate-at-import-rules": [
       true,
     ],
-    "no-duplicate-selectors": [
-      true,
-    ],
+    "no-duplicate-selectors": null,
     "no-empty-source": [
       true,
     ],
@@ -1053,7 +1040,7 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "scss/at-function-pattern": [
       "^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
-        "message": "Expected function name to be kebab-case",
+        "message": [Function],
       },
     ],
     "scss/at-if-closing-brace-newline-after": [
@@ -1074,7 +1061,7 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "scss/at-mixin-pattern": [
       "^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
-        "message": "Expected mixin name to be kebab-case",
+        "message": [Function],
       },
     ],
     "scss/at-rule-conditional-no-parentheses": [
@@ -1114,7 +1101,7 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "scss/dollar-variable-pattern": [
       "^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
-        "message": "Expected variable to be kebab-case",
+        "message": [Function],
       },
     ],
     "scss/double-slash-comment-empty-line-before": [
@@ -1162,7 +1149,7 @@ exports[`should match Stylelint Configuration snapshot: css 1`] = `
     "scss/percent-placeholder-pattern": [
       "^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$",
       {
-        "message": "Expected placeholder to be kebab-case",
+        "message": [Function],
       },
     ],
     "selector-anb-no-unmatchable": [

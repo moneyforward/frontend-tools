@@ -38,7 +38,7 @@
   "dependencies": {
     "stylelint-config-recess-order": "^7.0.0",
     "stylelint-config-standard": "^40.0.0",
-    "stylelint-config-standard-scss": "^14.0.0"
+    "stylelint-config-standard-scss": "^17.0.0"
   },
   "devDependencies": {
     "@frontend-tools/release-config": "workspace:*",
