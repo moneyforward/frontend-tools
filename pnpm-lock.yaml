@@ -103,8 +103,8 @@ importers:
         specifier: 13.1.5
         version: 13.1.5(semantic-release@25.0.3(typescript@5.9.3))
       conventional-changelog-conventionalcommits:
-        specifier: 9.0.0
-        version: 9.0.0
+        specifier: 9.2.0
+        version: 9.2.0
       semantic-release-monorepo:
         specifier: 8.0.2
         version: 8.0.2(semantic-release@25.0.3(typescript@5.9.3))
@@ -1690,8 +1690,8 @@ packages:
     resolution: {integrity: sha512-CLf+zr6St0wIxos4bmaKHRXWAcsCXrJU6F4VdNDrGRK3B8LDLKoX3zuMV5GhtbGkVR/LohZ6MT6im43vZLSjmA==}
     engines: {node: '>=18'}
 
-  conventional-changelog-conventionalcommits@9.0.0:
-    resolution: {integrity: sha512-5e48V0+DsWvQBEnnbBFhYQwYDzFPXVrakGPP1uSxekDkr5d7YWrmaWsgJpKFR0SkXmxK6qQr9O42uuLb9wpKxA==}
+  conventional-changelog-conventionalcommits@9.2.0:
+    resolution: {integrity: sha512-fCf+ODjseueTV09wVBoC0HXLi3OyuBJ+HfE3L63Khxqnr99f9nUcnQh3a15lCWHlGLihyZShW/mVVkBagr9JvQ==}
     engines: {node: '>=18'}
 
   conventional-changelog-writer@8.0.0:
@@ -6582,7 +6582,7 @@ snapshots:
     dependencies:
       compare-func: 2.0.0
 
-  conventional-changelog-conventionalcommits@9.0.0:
+  conventional-changelog-conventionalcommits@9.2.0:
     dependencies:
       compare-func: 2.0.0
 
