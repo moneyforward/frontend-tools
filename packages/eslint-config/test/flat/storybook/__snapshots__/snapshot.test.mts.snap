@@ -624,6 +624,9 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Flat Configur
         "properties": false,
       },
     ],
+    "import-x/no-anonymous-default-export": [
+      0,
+    ],
     "import/consistent-type-specifier-style": [
       2,
       "prefer-inline",
