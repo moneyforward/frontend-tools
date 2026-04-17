@@ -2542,9 +2542,6 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Flat Configur
       2,
       "always",
     ],
-    "react-hooks/component-hook-factories": [
-      2,
-    ],
     "react-hooks/config": [
       2,
     ],

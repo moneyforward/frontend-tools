@@ -2264,9 +2264,6 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
     "radix": [
       "error",
     ],
-    "react-hooks/component-hook-factories": [
-      "error",
-    ],
     "react-hooks/config": [
       "error",
     ],
