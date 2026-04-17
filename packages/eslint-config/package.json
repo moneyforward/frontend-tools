@@ -49,8 +49,8 @@
   "homepage": "https://github.com/moneyforward/frontend-tools/tree/main/packages/eslint-config#readme",
   "dependencies": {
     "@next/eslint-plugin-next": "15.5.15",
-    "@typescript-eslint/eslint-plugin": "8.24.0",
-    "@typescript-eslint/parser": "8.24.0",
+    "@typescript-eslint/eslint-plugin": "8.58.2",
+    "@typescript-eslint/parser": "8.58.2",
     "confusing-browser-globals": "1.0.11",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import": "2.32.0",
@@ -66,7 +66,7 @@
     "eslint-plugin-testing-library": "7.16.2",
     "eslint-plugin-unicorn": "56.0.1",
     "globals": "17.5.0",
-    "typescript-eslint": "8.24.0"
+    "typescript-eslint": "8.58.2"
   },
   "devDependencies": {
     "@frontend-tools/release-config": "workspace:*",
