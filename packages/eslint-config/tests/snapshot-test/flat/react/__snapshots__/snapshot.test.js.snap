@@ -808,6 +808,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
           ],
         ],
         "named": false,
+        "sortTypesGroup": false,
         "warnOnUnassignedImports": false,
       },
     ],

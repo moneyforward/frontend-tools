@@ -740,6 +740,7 @@ exports[`should match ESLint configuration snapshot: next 1`] = `
           ],
         ],
         "named": false,
+        "sortTypesGroup": false,
         "warnOnUnassignedImports": false,
       },
     ],
