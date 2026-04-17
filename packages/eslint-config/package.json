@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/moneyforward/frontend-tools/tree/main/packages/eslint-config#readme",
   "dependencies": {
-    "@next/eslint-plugin-next": "15.0.3",
+    "@next/eslint-plugin-next": "15.5.15",
     "@typescript-eslint/eslint-plugin": "8.24.0",
     "@typescript-eslint/parser": "8.24.0",
     "confusing-browser-globals": "1.0.11",
