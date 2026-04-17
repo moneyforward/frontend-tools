@@ -1,5 +1,6 @@
 module.exports = {
   plugins: ['react-hooks'],
+  extends: ['plugin:react-hooks/recommended'],
 
   rules: {
     // Verify the list of the dependencies for Hooks like useEffect and similar.
