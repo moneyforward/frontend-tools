@@ -2,11 +2,7 @@
 
 exports[`should match Stylelint Configuration snapshot: css-modules 1`] = `
 {
-  "pluginFunctions": {
-    "order/order": [Function],
-    "order/properties-alphabetical-order": [Function],
-    "order/properties-order": [Function],
-  },
+  "pluginFunctions": undefined,
   "rules": {
     "alpha-value-notation": [
       "percentage",
