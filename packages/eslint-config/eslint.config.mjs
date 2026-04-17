@@ -20,6 +20,7 @@ export default [
     rules: {
       'unicorn/prefer-module': ['off'],
       'unicorn/filename-case': ['off'],
+      'n/no-unsupported-features/node-builtins': ['off'],
     },
   },
 
