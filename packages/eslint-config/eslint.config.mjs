@@ -12,8 +12,8 @@ export default [
     files: [
       '**/eslintrc/**/*',
       'rules/**/*',
-      'tests/**/*',
-      '**/snapshot.test.js.snap',
+      'test/**/*',
+      '**/snapshot.test.*',
       '.prettierrc.js',
       'release.config.js',
     ],
@@ -24,7 +24,7 @@ export default [
   },
 
   {
-    files: ['**/flat/**/*.mjs', '**/eslint.config.*'],
+    files: ['**/flat/**/*.mjs', '**/*.config.*'],
     rules: {
       'import/no-default-export': ['off'],
     },
