@@ -8,7 +8,7 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
   "globals": {},
   "ignorePatterns": [],
   "noInlineConfig": undefined,
-  "parser": "/Users/yamada.naoki/Documents/moneyforward/_dev/frontend-tools/node_modules/.pnpm/@typescript-eslint+parser@8.24.0_eslint@9.39.4_typescript@5.9.3/node_modules/@typescript-eslint/parser/dist/index.js",
+  "parser": undefined,
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
