@@ -66,3 +66,6 @@ typings/
 
 # Visual Studio Code
 .vscode/*
+
+# Claude settings
+.claude/settings.local.json

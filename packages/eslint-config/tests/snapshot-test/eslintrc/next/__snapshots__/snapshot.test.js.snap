@@ -2301,10 +2301,55 @@ exports[`should match ESLint configuration snapshot: next 1`] = `
     "radix": [
       2,
     ],
+    "react-hooks/component-hook-factories": [
+      2,
+    ],
+    "react-hooks/config": [
+      2,
+    ],
+    "react-hooks/error-boundaries": [
+      2,
+    ],
     "react-hooks/exhaustive-deps": [
       2,
     ],
+    "react-hooks/gating": [
+      2,
+    ],
+    "react-hooks/globals": [
+      2,
+    ],
+    "react-hooks/immutability": [
+      2,
+    ],
+    "react-hooks/incompatible-library": [
+      1,
+    ],
+    "react-hooks/preserve-manual-memoization": [
+      2,
+    ],
+    "react-hooks/purity": [
+      2,
+    ],
+    "react-hooks/refs": [
+      2,
+    ],
     "react-hooks/rules-of-hooks": [
+      2,
+    ],
+    "react-hooks/set-state-in-effect": [
+      2,
+    ],
+    "react-hooks/set-state-in-render": [
+      2,
+    ],
+    "react-hooks/static-components": [
+      2,
+    ],
+    "react-hooks/unsupported-syntax": [
+      1,
+    ],
+    "react-hooks/use-memo": [
       2,
     ],
     "react/boolean-prop-naming": [
