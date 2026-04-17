@@ -865,6 +865,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
           ],
         ],
         "named": false,
+        "sortTypesGroup": false,
         "warnOnUnassignedImports": false,
       },
     ],

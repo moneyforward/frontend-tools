@@ -677,6 +677,7 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
           ],
         ],
         "named": false,
+        "sortTypesGroup": false,
         "warnOnUnassignedImports": false,
       },
     ],
