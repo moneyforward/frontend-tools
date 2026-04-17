@@ -69,8 +69,8 @@ importers:
         specifier: 56.0.1
         version: 56.0.1(eslint@9.39.4)
       globals:
-        specifier: 15.11.0
-        version: 15.11.0
+        specifier: 15.15.0
+        version: 15.15.0
       jest:
         specifier: '*'
         version: 30.3.0(@types/node@24.12.2)(esbuild-register@3.6.0(esbuild@0.24.2))
@@ -2507,8 +2507,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@15.11.0:
-    resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
+  globals@15.15.0:
+    resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -7144,7 +7144,7 @@ snapshots:
       eslint: 9.39.4
       eslint-plugin-es-x: 7.8.0(eslint@9.39.4)
       get-tsconfig: 4.10.1
-      globals: 15.11.0
+      globals: 15.15.0
       ignore: 5.3.2
       minimatch: 9.0.5
       semver: 7.7.1
@@ -7214,7 +7214,7 @@ snapshots:
       core-js-compat: 3.38.1
       eslint: 9.39.4
       esquery: 1.6.0
-      globals: 15.11.0
+      globals: 15.15.0
       indent-string: 4.0.0
       is-builtin-module: 3.2.1
       jsesc: 3.0.2
@@ -7632,7 +7632,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@15.11.0: {}
+  globals@15.15.0: {}
 
   globalthis@1.0.4:
     dependencies:
