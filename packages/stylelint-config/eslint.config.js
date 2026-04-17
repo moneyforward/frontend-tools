@@ -23,4 +23,11 @@ export default [
   ...node,
 
   ...typescript,
+
+  {
+    files: ['test/**/*'],
+    rules: {
+      'n/no-unsupported-features/node-builtins': ['off'],
+    },
+  },
 ];
