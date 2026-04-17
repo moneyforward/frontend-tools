@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`should match ESLint Flat Configuration snapshot: storybook 1`] = `
+exports[`ESLint Configuration Snapshot Tests > should match ESLint Flat Configuration snapshot: storybook 1`] = `
 {
   "language": "@/js",
   "languageOptions": {
@@ -75,7 +75,7 @@ exports[`should match ESLint Flat Configuration snapshot: storybook 1`] = `
       "ecmaVersion": "latest",
       "projectService": true,
       "sourceType": "module",
-      "tsconfigRootDir": "/Users/yamada.naoki/Documents/moneyforward/_dev/frontend-tools/packages/eslint-config/configs/flat",
+      "tsconfigRootDir": "/dummy",
     },
     "sourceType": "module",
   },
