@@ -84,7 +84,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
     "import",
     "promise",
     "unicorn:eslint-plugin-unicorn@56.0.1",
-    "n:eslint-plugin-n@17.14.0",
+    "n:eslint-plugin-n@17.24.0",
   ],
   "processor": undefined,
   "rules": {
