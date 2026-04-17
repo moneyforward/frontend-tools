@@ -69,7 +69,7 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Flat Configur
       "undefined": false,
       "unescape": false,
     },
-    "parser": "typescript-eslint/parser@8.24.0",
+    "parser": "typescript-eslint/parser@8.58.2",
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true,
@@ -92,7 +92,7 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Flat Configur
     "react",
     "react-hooks:eslint-plugin-react-hooks@7.0.0",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.24.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.58.2",
     "@next/next",
     "jsdoc",
   ],
@@ -364,6 +364,9 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Flat Configur
     "@typescript-eslint/no-unnecessary-type-constraint": [
       2,
     ],
+    "@typescript-eslint/no-unnecessary-type-conversion": [
+      2,
+    ],
     "@typescript-eslint/no-unnecessary-type-parameters": [
       2,
     ],
@@ -409,6 +412,9 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Flat Configur
       0,
     ],
     "@typescript-eslint/no-useless-constructor": [
+      2,
+    ],
+    "@typescript-eslint/no-useless-default-assignment": [
       2,
     ],
     "@typescript-eslint/no-wrapper-object-types": [
@@ -2415,7 +2421,7 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Flat Configur
       },
     ],
     "no-with": [
-      2,
+      0,
     ],
     "object-shorthand": [
       2,

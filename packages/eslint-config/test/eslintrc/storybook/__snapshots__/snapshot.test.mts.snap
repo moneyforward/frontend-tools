@@ -224,6 +224,9 @@ exports[`should match ESLint configuration snapshot: storybook 1`] = `
     "@typescript-eslint/no-unnecessary-type-constraint": [
       "error",
     ],
+    "@typescript-eslint/no-unnecessary-type-conversion": [
+      "error",
+    ],
     "@typescript-eslint/no-unnecessary-type-parameters": [
       "error",
     ],
@@ -269,6 +272,9 @@ exports[`should match ESLint configuration snapshot: storybook 1`] = `
       "off",
     ],
     "@typescript-eslint/no-useless-constructor": [
+      "error",
+    ],
+    "@typescript-eslint/no-useless-default-assignment": [
       "error",
     ],
     "@typescript-eslint/no-wrapper-object-types": [
@@ -1841,7 +1847,7 @@ exports[`should match ESLint configuration snapshot: storybook 1`] = `
       },
     ],
     "no-with": [
-      "error",
+      "off",
     ],
     "object-shorthand": [
       "error",
