@@ -868,6 +868,9 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
     "jsdoc/empty-tags": [
       2,
     ],
+    "jsdoc/escape-inline-tags": [
+      2,
+    ],
     "jsdoc/implements-on-classes": [
       2,
     ],
@@ -916,6 +919,15 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
     "jsdoc/no-undefined-types": [
       0,
     ],
+    "jsdoc/prefer-import-tag": [
+      0,
+    ],
+    "jsdoc/reject-any-type": [
+      2,
+    ],
+    "jsdoc/reject-function-type": [
+      2,
+    ],
     "jsdoc/require-asterisk-prefix": [
       0,
     ],
@@ -957,6 +969,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
     "jsdoc/require-jsdoc": [
       2,
       {
+        "checkAllFunctionExpressions": false,
         "checkConstructors": false,
         "checkGetters": true,
         "checkSetters": true,
@@ -971,6 +984,7 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
         "enableFixer": true,
         "exemptEmptyConstructors": false,
         "exemptEmptyFunctions": false,
+        "exemptOverloadedImplementations": false,
         "fixerMessage": "",
         "publicOnly": true,
         "require": {
@@ -981,7 +995,14 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
           "FunctionExpression": true,
           "MethodDefinition": true,
         },
+        "skipInterveningOverloadedDeclarations": true,
       },
+    ],
+    "jsdoc/require-next-description": [
+      0,
+    ],
+    "jsdoc/require-next-type": [
+      2,
     ],
     "jsdoc/require-param": [
       2,
@@ -1016,6 +1037,9 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
     "jsdoc/require-property-type": [
       0,
     ],
+    "jsdoc/require-rejects": [
+      0,
+    ],
     "jsdoc/require-returns": [
       0,
     ],
@@ -1028,16 +1052,34 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
     "jsdoc/require-returns-type": [
       0,
     ],
+    "jsdoc/require-tags": [
+      0,
+    ],
     "jsdoc/require-template": [
+      0,
+    ],
+    "jsdoc/require-template-description": [
       0,
     ],
     "jsdoc/require-throws": [
       0,
     ],
+    "jsdoc/require-throws-description": [
+      0,
+    ],
+    "jsdoc/require-throws-type": [
+      2,
+    ],
     "jsdoc/require-yields": [
       2,
     ],
     "jsdoc/require-yields-check": [
+      2,
+    ],
+    "jsdoc/require-yields-description": [
+      0,
+    ],
+    "jsdoc/require-yields-type": [
       2,
     ],
     "jsdoc/sort-tags": [
@@ -1055,6 +1097,21 @@ exports[`ESLint Configuration Snapshot Tests should match ESLint Configuration s
       },
     ],
     "jsdoc/text-escaping": [
+      0,
+    ],
+    "jsdoc/ts-method-signature-style": [
+      0,
+    ],
+    "jsdoc/ts-no-empty-object-type": [
+      2,
+    ],
+    "jsdoc/ts-no-unnecessary-template-expression": [
+      0,
+    ],
+    "jsdoc/ts-prefer-function-type": [
+      0,
+    ],
+    "jsdoc/type-formatting": [
       0,
     ],
     "jsdoc/valid-types": [
