@@ -21,6 +21,7 @@ const reactHooksRuleSet = {
     'react-hooks': reactHooks,
   },
   rules: {
+    ...reactHooks.configs.flat.recommended.rules,
     ...reactHooksRuleSetBase.rules,
   },
 };
@@ -38,7 +39,7 @@ const jsxA11yRuleSet = {
 export default [
   {
     languageOptions: {
-      ...react.configs.recommended.languageOptions,
+      ...react.configs.flat?.recommended.languageOptions,
     },
 
     settings: {
