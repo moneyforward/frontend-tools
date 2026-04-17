@@ -87,7 +87,7 @@ The main scripts used during development are:
 ### Testing
 
 - If you make changes, add unit tests or make sure that the existing tests pass.
-- Tests are powered by [Jest](https://jestjs.io/). When adding tests, try to increase test coverage.
+- Tests are powered by [Vitest](https://vitest.dev/). When adding tests, try to increase test coverage.
 
 ### Pull Requests
 

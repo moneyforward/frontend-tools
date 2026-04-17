@@ -23,8 +23,8 @@
     "rules"
   ],
   "scripts": {
-    "lint": "eslint './**/*.@(js|ts|tsx)'",
-    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest",
+    "lint": "eslint './**/*.@(js|ts|tsx|mts)'",
+    "test": "vitest",
     "release": "semantic-release"
   },
   "repository": {
@@ -70,10 +70,11 @@
   },
   "devDependencies": {
     "@frontend-tools/release-config": "workspace:*",
+    "@types/node": "24.12.2",
     "eslint": "9.39.4",
-    "jest": "30.3.0",
     "semantic-release": "25.0.3",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vitest": "4.1.4"
   },
   "peerDependencies": {
     "eslint": "^8.57.0 || ^9.0.0",
