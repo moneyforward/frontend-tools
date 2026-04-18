@@ -1,3 +1,9 @@
+## [stylelint-config-moneyforward-v3.0.1](https://github.com/moneyforward/frontend-tools/compare/stylelint-config-moneyforward-v3.0.0...stylelint-config-moneyforward-v3.0.1) (2026-04-18)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-n to v17.24.0 ([#447](https://github.com/moneyforward/frontend-tools/issues/447)) ([975af80](https://github.com/moneyforward/frontend-tools/commit/975af804ac2dc29f47c70f7f852ac2e57c185958))
+
 ## [stylelint-config-moneyforward-v3.0.0](https://github.com/moneyforward/frontend-tools/compare/stylelint-config-moneyforward-v2.0.1...stylelint-config-moneyforward-v3.0.0) (2026-03-03)
 
 ### ⚠ BREAKING CHANGES
