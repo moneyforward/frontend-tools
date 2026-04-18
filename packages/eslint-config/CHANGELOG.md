@@ -1,3 +1,37 @@
+## [eslint-config-moneyforward-v6.0.0](https://github.com/moneyforward/frontend-tools/compare/5.1.4...6.0.0) (2026-04-18)
+
+### ⚠ BREAKING CHANGES
+
+* **eslint-config:** 13 new error-level react-hooks rules are now enabled
+by default (component-hook-factories, config, error-boundaries, gating,
+globals, immutability, preserve-manual-memoization, purity, refs,
+set-state-in-effect, set-state-in-render, static-components, use-memo),
+plus 2 new warn-level rules (incompatible-library, unsupported-syntax).
+Downstream consumers may see new lint errors on existing React code
+and should either fix the violations or explicitly override these rules.
+
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
+
+* chore: fix ci
+
+### Features
+
+* **eslint-config:** enable recommended react-hooks rules from v6 ([#424](https://github.com/moneyforward/frontend-tools/issues/424)) ([5308724](https://github.com/moneyforward/frontend-tools/commit/53087247c7f09d37e1d6ccca650a44e3691bad8e))
+
+### Bug Fixes
+
+* **deps:** update dependency @next/eslint-plugin-next to v15.5.15 ([#441](https://github.com/moneyforward/frontend-tools/issues/441)) ([65bd3d1](https://github.com/moneyforward/frontend-tools/commit/65bd3d198808946751bc71f3329d9a0ecc52492a))
+* **deps:** update dependency eslint-plugin-import to v2.32.0 ([#430](https://github.com/moneyforward/frontend-tools/issues/430)) ([c638eb9](https://github.com/moneyforward/frontend-tools/commit/c638eb98146c5462793acd02ad6dc3a73a0a34d0))
+* **deps:** update dependency eslint-plugin-jest to v29 ([#425](https://github.com/moneyforward/frontend-tools/issues/425)) ([6e84da9](https://github.com/moneyforward/frontend-tools/commit/6e84da98304b1d422d6c9c26aa8e141b2fbf3f58))
+* **deps:** update dependency eslint-plugin-jsdoc to v62 ([#426](https://github.com/moneyforward/frontend-tools/issues/426)) ([bd6bbc2](https://github.com/moneyforward/frontend-tools/commit/bd6bbc2a6c78bf0d57406886661ecbae84e85024))
+* **deps:** update dependency eslint-plugin-n to v17.24.0 ([#447](https://github.com/moneyforward/frontend-tools/issues/447)) ([975af80](https://github.com/moneyforward/frontend-tools/commit/975af804ac2dc29f47c70f7f852ac2e57c185958))
+* **deps:** update dependency eslint-plugin-react-hooks to v7.1.0 ([#443](https://github.com/moneyforward/frontend-tools/issues/443)) ([789ee77](https://github.com/moneyforward/frontend-tools/commit/789ee77c4df1585d853129f71b02b8feae07ea91))
+* **deps:** update dependency eslint-plugin-storybook to v10 ([#427](https://github.com/moneyforward/frontend-tools/issues/427)) ([f75c9f6](https://github.com/moneyforward/frontend-tools/commit/f75c9f6663f6a5624b6a6686fad2fda90a803a95))
+* **deps:** update dependency eslint-plugin-storybook to v9.1.20 ([#445](https://github.com/moneyforward/frontend-tools/issues/445)) ([c2378b1](https://github.com/moneyforward/frontend-tools/commit/c2378b1df1d97c4a8b4be238eae10a236a0ae118))
+* **deps:** update dependency eslint-plugin-testing-library to v7.16.2 ([#446](https://github.com/moneyforward/frontend-tools/issues/446)) ([148c9f3](https://github.com/moneyforward/frontend-tools/commit/148c9f36d2948d6f63905c77da3dc5138d262d34))
+* **deps:** update dependency globals to v17 ([#429](https://github.com/moneyforward/frontend-tools/issues/429)) ([83b3424](https://github.com/moneyforward/frontend-tools/commit/83b3424362edf53037b7cc54f798778361c655a1))
+* **deps:** update typescript-eslint monorepo to v8.58.2 ([#448](https://github.com/moneyforward/frontend-tools/issues/448)) ([de7dc10](https://github.com/moneyforward/frontend-tools/commit/de7dc10e617efb9b360cce902e528bcad4787d47))
+
 ## [eslint-config-moneyforward-v5.1.4](https://github.com/moneyforward/frontend-tools/compare/5.1.3...5.1.4) (2026-02-25)
 
 ### Bug Fixes
