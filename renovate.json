@@ -1,6 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:js-lib", ":semanticCommits"],
+  "extends": [
+    "config:js-lib",
+    ":semanticCommits",
+    "helpers:pinGitHubActionDigests"
+  ],
   "timezone": "Asia/Tokyo",
   "labels": ["dependencies"],
   "schedule": ["before 4am on the first day of the month"],
