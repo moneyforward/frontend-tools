@@ -6,15 +6,15 @@ runs:
   using: 'composite'
   steps:
     - name: Setup node.js
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
       with:
         node-version-file: ./.node-version
 
     - name: Setup pnpm
-      uses: pnpm/action-setup@v6.0.0
+      uses: pnpm/action-setup@08c4be7e2e672a47d11bd04269e27e5f3e8529cb # v6.0.0
 
     - name: cache node_modules
-      uses: actions/cache@v5
+      uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
       with:
         path: |
           ./node_modules
