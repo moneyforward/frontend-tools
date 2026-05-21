@@ -1,0 +1,33 @@
+# The usage of this file. https://help.github.com/articles/about-codeowners/
+# This file is for Standards. https://moneyforward.kibe.la/notes/280065
+#
+# Rules Summary
+# - "Head of Development" must be appointed by "Person Responsible for Overseeing Development".
+# - "Quality Controller" must be appointed by "Head of Development".
+# - "Quality Controller" review and approve pull requests.
+# - "Head of Development" and "Person Responsible for Overseeing Development" are listed in the following documents.
+# https://docs.google.com/spreadsheets/d/1i4IYawEqzApsqDHWe6fNxtxLiEHFBZw1yhsSKpXJyZo/edit?usp=sharing
+#
+# Person Responsible for Overseeing Development (開発管掌責任者)
+# @wata-gh
+#
+# - Changes in "Head of Development" will require the approval of "Person Responsible for Overseeing Development", so specify the approver of the CODEOWNERS file.
+#
+# Head of Development (開発責任者)
+# @wata-gh
+#
+# - For various audit compliance purposes, "Head of Development" is managed in this file on GitHub.
+# - If you want to change "Head of Development", please create a pull request rewriting "Head of Development" line in this file and merge it after getting approval from "Person Responsible for Overseeing Development".
+# - Please also make changes the github team maintainer of "Quality Controller" for this product at the same time.
+# - "Head of Development" should join the Slack channel where notifications about the creation of pull requests for this repository will appear.
+#
+# Quality Controller (品質管理担当者)
+# @moneyforward/mf-tsd-admin
+#
+# - For various audit compliance purposes, "Quality Controller" is managed on GitHub Team.
+# - A GitHub Team just for the purpose of managing "Quality Controller", separate from the regular developer team.
+# - You can ask your "Quality Controller" to review and approve your work by writing `* @moneyforward/hoge_reviewers`.
+# - To add or remove "Quality Controller", please ask "Head of Development".
+# - "Head of Development" is the github team maintainer of "Quality Controller".
+
+* @moneyforward/mf-tsd-admin @moneyforward/mf-web-frontend-committee-admin @moneyforward/mf-frontend-forward-admin
