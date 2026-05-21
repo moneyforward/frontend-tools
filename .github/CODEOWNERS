@@ -22,7 +22,7 @@
 # - "Head of Development" should join the Slack channel where notifications about the creation of pull requests for this repository will appear.
 #
 # Quality Controller (品質管理担当者)
-# @moneyforward/mf-tsd-admin
+* @moneyforward/oss-frontend 
 #
 # - For various audit compliance purposes, "Quality Controller" is managed on GitHub Team.
 # - A GitHub Team just for the purpose of managing "Quality Controller", separate from the regular developer team.
