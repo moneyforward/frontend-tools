@@ -1,0 +1,34 @@
+{
+  "name": "oxlint-config-moneyforward",
+  "version": "0.0.0",
+  "description": "Money Forward's Oxlint rules as an extensible shared config.",
+  "type": "module",
+  "engines": {
+    "node": "^22.18.0 || >=24.0.0"
+  },
+  "files": [],
+  "scripts": {
+    "release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moneyforward/frontend-tools.git",
+    "directory": "packages/oxlint-config"
+  },
+  "keywords": [
+    "oxlint",
+    "oxlint-config",
+    "lint",
+    "typescript"
+  ],
+  "author": "Money Forward Engineers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moneyforward/frontend-tools/issues"
+  },
+  "homepage": "https://github.com/moneyforward/frontend-tools/tree/main/packages/oxlint-config#readme",
+  "devDependencies": {
+    "@frontend-tools/release-config": "workspace:*",
+    "semantic-release": "25.0.3"
+  }
+}
