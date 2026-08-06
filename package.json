@@ -13,6 +13,7 @@
   "scripts": {
     "format": "prettier -c './**/*.@(js|cjs|ts|tsx|md)' -w",
     "eslint-config": "   pnpm -F 'eslint-config-moneyforward'",
+    "oxlint-config": "   pnpm -F 'oxlint-config-moneyforward'",
     "stylelint-config": "pnpm -F 'stylelint-config-moneyforward'"
   },
   "repository": {
