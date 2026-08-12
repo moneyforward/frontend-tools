@@ -517,9 +517,6 @@ exports[`should match ESLint configuration snapshot: node 1`] = `
     "n/no-process-exit": [
       "error",
     ],
-    "n/no-unpublished-bin": [
-      "error",
-    ],
     "n/no-unpublished-import": [
       "error",
     ],
