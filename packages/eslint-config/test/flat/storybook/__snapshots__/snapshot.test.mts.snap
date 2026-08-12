@@ -93,7 +93,7 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Flat Configur
     "react-hooks:eslint-plugin-react-hooks@7.0.0",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
     "@typescript-eslint:@typescript-eslint/eslint-plugin@8.58.2",
-    "storybook",
+    "storybook:eslint-plugin-storybook@10.5.7",
   ],
   "processor": undefined,
   "rules": {
