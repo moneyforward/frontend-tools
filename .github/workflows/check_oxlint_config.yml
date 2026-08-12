@@ -1,0 +1,35 @@
+name: Check oxlint-config
+
+on:
+  pull_request:
+    branches:
+      - "*"
+    paths:
+      - "packages/oxlint-config/**"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      WORKING_DIRECTORY: packages/oxlint-config
+    defaults:
+      run:
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+    strategy:
+      fail-fast: false
+      matrix:
+        task:
+          - test
+          - build
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Initialize
+        uses: ./.github/actions/restore-node
+        with:
+          working_directory: ${{ env.WORKING_DIRECTORY }}
+
+      - name: Run ${{ matrix.task }}
+        run: pnpm ${{ matrix.task }}

@@ -2,13 +2,26 @@
   "name": "oxlint-config-moneyforward",
   "version": "0.0.0",
   "description": "Money Forward's Oxlint rules as an extensible shared config.",
+  "exports": {
+    ".": {
+      "types": "./dist/configs/index.d.ts",
+      "import": "./dist/configs/index.js"
+    }
+  },
   "type": "module",
   "engines": {
     "node": "^22.18.0 || >=24.0.0"
   },
-  "files": [],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "release": "semantic-release"
+    "test": "vitest",
+    "build:js": "tsc -p tsconfig.build.json",
+    "build:configs-json": "node ./scripts/generateConfigsJson.js",
+    "build:rules-json": "  node ./scripts/generateRulesJson.js",
+    "build": "pnpm build:js && pnpm build:rules-json && pnpm build:configs-json",
+    "release": "pnpm build && semantic-release"
   },
   "repository": {
     "type": "git",
@@ -29,6 +42,15 @@
   "homepage": "https://github.com/moneyforward/frontend-tools/tree/main/packages/oxlint-config#readme",
   "devDependencies": {
     "@frontend-tools/release-config": "workspace:*",
-    "semantic-release": "25.0.9"
+    "@types/node": "24.12.2",
+    "oxlint": "1.77.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "semantic-release": "25.0.9",
+    "typescript": "5.9.3",
+    "vitest": "4.1.10"
+  },
+  "peerDependencies": {
+    "oxlint": "1.77.0",
+    "oxlint-tsgolint": "7.0.2001"
   }
 }

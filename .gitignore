@@ -69,3 +69,5 @@ typings/
 
 # Claude settings
 .claude/settings.local.json
+
+dist/
