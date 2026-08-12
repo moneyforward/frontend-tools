@@ -46,7 +46,7 @@
     "eslint": "9.39.5",
     "eslint-config-moneyforward": "workspace:*",
     "semantic-release": "25.0.9",
-    "stylelint": "17.8.0",
+    "stylelint": "17.14.1",
     "typescript": "5.9.3",
     "vitest": "4.1.10"
   },
