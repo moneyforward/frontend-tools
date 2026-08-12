@@ -5,8 +5,8 @@
   "description": "Shared release config for frontend-tools packages",
   "main": "index.js",
   "dependencies": {
-    "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/git": "10.0.1",
+    "@semantic-release/changelog": "7.0.0",
+    "@semantic-release/git": "11.0.1",
     "@semantic-release/npm": "13.1.5",
     "conventional-changelog-conventionalcommits": "9.3.1",
     "semantic-release-monorepo": "8.0.2"
