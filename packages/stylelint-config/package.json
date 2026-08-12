@@ -45,7 +45,7 @@
     "@types/node": "24.12.2",
     "eslint": "9.39.5",
     "eslint-config-moneyforward": "workspace:*",
-    "semantic-release": "25.0.3",
+    "semantic-release": "25.0.9",
     "stylelint": "17.8.0",
     "typescript": "5.9.3",
     "vitest": "4.1.10"

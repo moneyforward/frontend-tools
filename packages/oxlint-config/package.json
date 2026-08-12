@@ -29,6 +29,6 @@
   "homepage": "https://github.com/moneyforward/frontend-tools/tree/main/packages/oxlint-config#readme",
   "devDependencies": {
     "@frontend-tools/release-config": "workspace:*",
-    "semantic-release": "25.0.3"
+    "semantic-release": "25.0.9"
   }
 }
