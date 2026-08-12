@@ -823,6 +823,9 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
     "jsdoc/no-undefined-types": [
       "off",
     ],
+    "jsdoc/normalize-see-links": [
+      "off",
+    ],
     "jsdoc/prefer-import-tag": [
       "off",
     ],

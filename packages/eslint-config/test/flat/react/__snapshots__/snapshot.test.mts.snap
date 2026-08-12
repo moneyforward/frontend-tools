@@ -941,6 +941,9 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Configuration
     "jsdoc/no-undefined-types": [
       0,
     ],
+    "jsdoc/normalize-see-links": [
+      0,
+    ],
     "jsdoc/prefer-import-tag": [
       0,
     ],
