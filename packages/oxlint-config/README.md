@@ -77,7 +77,7 @@ export default defineConfig({
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "extends": [
-    "./node_modules/oxlint-config-moneyforward/configs/essentials.json"
+    "./node_modules/oxlint-config-moneyforward/dist/configs/essentials.json"
   ]
 }
 ```
@@ -88,8 +88,8 @@ If you need TypeScript support:
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "extends": [
-    "./node_modules/oxlint-config-moneyforward/configs/essentials.json",
-    "./node_modules/oxlint-config-moneyforward/configs/typescript.json"
+    "./node_modules/oxlint-config-moneyforward/dist/configs/essentials.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/typescript.json"
   ]
 }
 ```
@@ -100,12 +100,15 @@ You can combine other JSON presets as well, for example:
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "extends": [
-    "./node_modules/oxlint-config-moneyforward/configs/essentials.json",
-    "./node_modules/oxlint-config-moneyforward/configs/typescript.json",
-    "./node_modules/oxlint-config-moneyforward/configs/react.json",
-    "./node_modules/oxlint-config-moneyforward/configs/storybook.json",
-    "./node_modules/oxlint-config-moneyforward/configs/test/essentials.json",
-    "./node_modules/oxlint-config-moneyforward/configs/test/react.json"
+    "./node_modules/oxlint-config-moneyforward/dist/configs/essentials.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/typescript.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/jsdoc.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/node.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/react.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/nextjs.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/storybook.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/test/essentials.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/test/react.json"
   ]
 }
 ```
@@ -162,10 +165,10 @@ JSON config:
   "$schema": "./node_modules/oxlint/configuration_schema.json",
 
   "extends": [
-    "./node_modules/oxlint-config-moneyforward/configs/essentials.json",
-    "./node_modules/oxlint-config-moneyforward/configs/typescript.json",
-    "./node_modules/oxlint-config-moneyforward/configs/react.json",
-    "./node_modules/oxlint-config-moneyforward/configs/storybook.json"
+    "./node_modules/oxlint-config-moneyforward/dist/configs/essentials.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/typescript.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/react.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/storybook.json"
   ]
 }
 ```
@@ -202,11 +205,11 @@ JSON config:
   "$schema": "./node_modules/oxlint/configuration_schema.json",
 
   "extends": [
-    "./node_modules/oxlint-config-moneyforward/configs/essentials.json",
-    "./node_modules/oxlint-config-moneyforward/configs/typescript.json",
-    "./node_modules/oxlint-config-moneyforward/configs/react.json",
-    "./node_modules/oxlint-config-moneyforward/configs/test/essentials.json",
-    "./node_modules/oxlint-config-moneyforward/configs/test/react.json"
+    "./node_modules/oxlint-config-moneyforward/dist/configs/essentials.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/typescript.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/react.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/test/essentials.json",
+    "./node_modules/oxlint-config-moneyforward/dist/configs/test/react.json"
   ]
 }
 ```
