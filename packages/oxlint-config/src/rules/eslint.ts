@@ -15,7 +15,9 @@ export default defineConfig({
     complexity: ['off'],
     curly: ['error', 'multi-line'],
     'default-case': ['off'],
+    eqeqeq: ['error', 'always', { null: 'ignore' }],
     'func-name-matching': ['off'],
+    'func-names': ['error', 'as-needed'],
     'func-style': ['off'],
     'getter-return': [
       'error',
@@ -48,6 +50,7 @@ export default defineConfig({
       },
     ],
     'no-case-declarations': ['warn'],
+    'no-cond-assign': ['error', 'always'],
     'no-console': [
       'warn',
       {
@@ -417,6 +420,7 @@ export default defineConfig({
         property: 'pow',
       },
     ],
+    'no-return-assign': ['error', 'always'],
     'no-shadow': ['off'],
     'no-ternary': ['off'],
     'no-undef': ['off'],

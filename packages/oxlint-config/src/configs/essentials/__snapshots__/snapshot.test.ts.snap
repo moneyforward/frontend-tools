@@ -112,7 +112,7 @@ exports[`essentials > should match oxlint config snapshot 1`] = `
     "no-await-in-loop": "deny",
     "no-bitwise": "deny",
     "no-caller": "deny",
-    "no-case-declarations": "deny",
+    "no-case-declarations": "warn",
     "no-class-assign": "deny",
     "no-compare-neg-zero": "deny",
     "no-cond-assign": "deny",

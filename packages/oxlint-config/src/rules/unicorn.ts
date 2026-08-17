@@ -22,8 +22,8 @@ export default defineConfig({
     'unicorn/no-null': ['off'],
     'unicorn/prefer-global-this': ['off'],
     'unicorn/prefer-import-meta-properties': ['off'],
-    // 'unicorn/relative-url-style': ['error', 'never'],
     'unicorn/require-post-message-target-origin': ['off'],
+    'unicorn/switch-case-braces': ['error', 'avoid'],
   },
 
   overrides: [
