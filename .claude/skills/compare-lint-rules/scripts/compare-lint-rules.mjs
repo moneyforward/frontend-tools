@@ -13,6 +13,10 @@
  * sides' configuration sources rather than the snapshots (see
  * `lib/authoredOptions.mjs`).
  *
+ * Both sides are resolved for the single file the ESLint snapshot test targets:
+ * ESLint's snapshot is already flattened for it, while oxlint's `overrides[]`
+ * have to be matched and merged here (see `lib/fileScope.mjs`).
+ *
  * Usage:
  *   node .claude/skills/compare-lint-rules/scripts/compare-lint-rules.mjs <granularity> [options]
  *
@@ -30,6 +34,7 @@ import path from 'node:path';
 import { loadAuthoredOptions } from './lib/authoredOptions.mjs';
 import { loadCatalog } from './lib/catalog.mjs';
 import { compare } from './lib/compare.mjs';
+import { readTargetFile, resolveForFile } from './lib/fileScope.mjs';
 import { granularityNames, resolveGranularity } from './lib/granularities.mjs';
 import { collectWarnings, readComposition } from './lib/metadata.mjs';
 import { loadOptionSchema } from './lib/optionSchema.mjs';
@@ -74,15 +79,32 @@ async function main() {
 
   requireSnapshots(granularity, repoRoot, [eslintSnapshot, oxlintSnapshot]);
 
+  // The ESLint snapshot is resolved for exactly one file, so the oxlint side has
+  // to be collapsed onto that same file before the two are comparable.
+  const targetFile = readTargetFile(eslintDirAbs);
+
   const eslintRules = readSections(eslintSnapshot, 'ESLint', ['rules']).rules;
-  const { plugins, rules: oxlintRules } = readSections(
-    oxlintSnapshot,
-    'oxlint',
-    ['rules', 'plugins'],
+  const {
+    overrides,
+    plugins,
+    rules: oxlintRootRules,
+  } = readSections(oxlintSnapshot, 'oxlint', ['rules', 'plugins', 'overrides']);
+  const resolved = resolveForFile(oxlintRootRules, overrides, targetFile);
+  const oxlintRules = resolved.rules;
+  const oxlintPlugins = new Set([
+    ...(Array.isArray(plugins) ? plugins : []),
+    ...resolved.plugins,
+  ]);
+  const authoredEslint = await loadAuthoredOptions(
+    'eslint',
+    eslintDirAbs,
+    targetFile,
   );
-  const oxlintPlugins = new Set(Array.isArray(plugins) ? plugins : []);
-  const authoredEslint = await loadAuthoredOptions('eslint', eslintDirAbs);
-  const authoredOxlint = await loadAuthoredOptions('oxlint', oxlintDirAbs);
+  const authoredOxlint = await loadAuthoredOptions(
+    'oxlint',
+    oxlintDirAbs,
+    targetFile,
+  );
 
   const result = compare({
     authored: {
@@ -114,6 +136,7 @@ async function main() {
     oxlintPlugins: [...oxlintPlugins],
     oxlintRuleCount: Object.keys(oxlintRules).length,
     oxlintSnapshot: path.relative(repoRoot, oxlintSnapshot),
+    targetFile,
     warnings: collectWarnings({
       eslintDirAbs,
       eslintSnapshot,

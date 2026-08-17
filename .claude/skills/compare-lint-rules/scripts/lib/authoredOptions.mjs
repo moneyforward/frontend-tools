@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
+import { matchesGlob } from './fileScope.mjs';
+
 /**
  * @typedef {{error: string | null, options: Map<string, unknown[]> | null}} AuthoredOptions
  */
@@ -26,10 +28,14 @@ import { pathToFileURL } from 'node:url';
  *
  * @param {string} dir Absolute path to the side's config directory.
  *
+ * @param {string} targetFile The file the ESLint snapshot resolves its config
+ * for. oxlint's `overrides` are file scoped, so only the ones matching this path
+ * are collected.
+ *
  * @returns {Promise<AuthoredOptions>} The authored options keyed by rule name,
  * or an error message when the source could not be loaded.
  */
-export async function loadAuthoredOptions(side, dir) {
+export async function loadAuthoredOptions(side, dir, targetFile) {
   const entry = path.join(
     dir,
     side === 'eslint' ? 'eslint.config.mjs' : 'oxlint.config.ts',
@@ -46,7 +52,7 @@ export async function loadAuthoredOptions(side, dir) {
     const loaded = await import(pathToFileURL(entry).href);
     const options = new Map();
 
-    collectAuthoredRules(loaded.default, options);
+    collectAuthoredRules(loaded.default, options, targetFile);
 
     return { error: null, options };
   } catch (error) {
@@ -61,32 +67,46 @@ export async function loadAuthoredOptions(side, dir) {
  * Walks a flat ESLint config array or an oxlint config object, merging every
  * `rules` map in resolution order so that later definitions win.
  *
- * oxlint's `overrides` are deliberately skipped: they are file scoped and are not
- * part of the baseline the comparison is about.
+ * oxlint's `overrides` are followed when their `files` patterns match
+ * `targetFile`. They cannot be skipped: `src/rules/*.ts` author entire rule sets
+ * inside `overrides[]`, so ignoring them reports every option as unwritten and
+ * silently compares against oxlint's schema defaults instead.
  *
  * @param {any} config A config array, config object, or `extends` entry.
  *
  * @param {Map<string, unknown[]>} into Accumulator keyed by rule name.
  *
+ * @param {string} targetFile The file the comparison is resolved for.
+ *
  * @returns {void}
  */
-function collectAuthoredRules(config, into) {
+function collectAuthoredRules(config, into, targetFile) {
   if (!config || typeof config !== 'object') {
     return;
   }
 
   if (Array.isArray(config)) {
     for (const entry of config) {
-      collectAuthoredRules(entry, into);
+      collectAuthoredRules(entry, into, targetFile);
     }
 
     return;
   }
 
   // oxlint resolves `extends` before the config's own rules.
-  collectAuthoredRules(config.extends, into);
+  collectAuthoredRules(config.extends, into, targetFile);
 
   for (const [rule, value] of Object.entries(config.rules ?? {})) {
     into.set(rule, Array.isArray(value) ? value.slice(1) : []);
+  }
+
+  for (const override of config.overrides ?? []) {
+    const applies = (override?.files ?? []).some((pattern) =>
+      matchesGlob(pattern, targetFile),
+    );
+
+    if (applies) {
+      collectAuthoredRules({ rules: override.rules }, into, targetFile);
+    }
   }
 }

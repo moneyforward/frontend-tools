@@ -35,6 +35,7 @@ function targetSection(meta) {
   const lines = [
     '## 対象',
     '',
+    `- 解決対象ファイル: \`${meta.targetFile}\`（両側ともこのファイルに対する実効設定で比較。oxlint 側は一致する \`overrides\` をマージ済み）`,
     `- ESLint snapshot: \`${meta.eslintSnapshot}\`（${meta.eslintRuleCount} ルール）`,
     `- oxlint snapshot: \`${meta.oxlintSnapshot}\`（${meta.oxlintRuleCount} ルール）`,
     `- ESLint 側構成: \`${meta.eslintComposition}\``,

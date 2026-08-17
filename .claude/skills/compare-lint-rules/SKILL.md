@@ -9,14 +9,14 @@ description: Compares the snapshot test results of eslint-config-moneyforward an
 
 ## Prerequisites
 
-This skill does not run the snapshot tests. It reads the **committed `.snap` files**, so the snapshot test for the target granularity must have been run beforehand. If it has not, point at these commands:
+The comparison itself reads the **committed `.snap` files**, so the snapshot test for the target granularity must have been run beforehand. If it has not, point at these commands (running them to verify a freshness warning is fine; **creating** a snapshot test is out of scope):
 
 ```bash
 pnpm eslint-config test run test/flat/<dir>     # ESLint side
 pnpm oxlint-config test run src/configs/<dir>   # oxlint side
 ```
 
-The script warns when a snapshot is older than the configuration it captures. When that warning appears, ask for the test to be re-run and state that the comparison is provisional.
+The script warns when a snapshot is older than the configuration it captures. The check only compares mtimes, so it fires on checkout order and on unrelated edits under the same tree — **it is often a false positive**. When the warning appears, run the two commands above yourself: a passing test means the snapshot matches the current configuration, and the report should say the warning was verified as a false positive rather than repeat it. Only when a test actually fails is the comparison provisional.
 
 ## Granularities and directories
 
@@ -68,9 +68,11 @@ Do not report the script's mechanical classification as-is. Always check the fol
 
    When a rule turns out to have merely been renamed or moved to another scope, propose adding it to `SCOPE_MAP` in `scripts/lib/ruleName.mjs` and re-running.
 
-3. **The plugin column under ❌ (unset on the oxlint side).** A row marked `未有効 (<scope>)` means the plugin is not enabled, so writing the rule alone would have no effect. Point out that the oxlint config's `plugins` may be incomplete.
+3. **That the `overrides` merge covered the rules you are reporting on.** The report header prints `解決対象ファイル`, and the oxlint side is collapsed onto that file. Spot-check a rule the oxlint rule set writes inside an `overrides[]` block (`src/rules/typescript.ts` puts its whole rule set there) and confirm the report shows the authored severity rather than the `categories` default. A whole scope showing up at `error` under ➕, or every option of a scope landing in 実質一致 / 判定不能, is the signature of a scoping miss — check `lib/fileScope.mjs` before reporting.
 
-4. **How to treat the option differences.** **Options cannot be judged from the snapshots.** ESLint's `calculateConfigForFile()` fills in schema defaults (for example `no-extra-boolean-cast` is only `['error']` in `rules/errors.js`, yet the snapshot shows `[{}]`), and oxlint drops rule options from `--print-config` when object-form `extends` is used ([oxc#22230](https://github.com/oxc-project/oxc/issues/22230); runtime behaviour is unaffected). For this section only, the script therefore imports `eslint.config.mjs` / `oxlint.config.ts` instead of reading the snapshots.
+4. **The plugin column under ❌ (unset on the oxlint side).** A row marked `未有効 (<scope>)` means the plugin is not enabled, so writing the rule alone would have no effect. Point out that the oxlint config's `plugins` may be incomplete.
+
+5. **How to treat the option differences.** **Options cannot be judged from the snapshots.** ESLint's `calculateConfigForFile()` fills in schema defaults (for example `no-extra-boolean-cast` is only `['error']` in `rules/errors.js`, yet the snapshot shows `[{}]`), and oxlint drops rule options from `--print-config` when object-form `extends` is used ([oxc#22230](https://github.com/oxc-project/oxc/issues/22230); runtime behaviour is unaffected). For this section only, the script therefore imports `eslint.config.mjs` / `oxlint.config.ts` instead of reading the snapshots.
 
    An option being absent on the oxlint side **does not mean it is unhandled**: when the eslint-config value equals oxlint's default, the oxlint side omits it on purpose. The script consults `node_modules/oxlint/configuration_schema.json` (which carries a `default` per option), resolves oxlint's effective value as "the value the rule set writes, otherwise the schema default", and splits the differences three ways:
 
@@ -111,7 +113,7 @@ Tell the user where the report was saved.
 | ⚠️ severity mismatch                   | Enabled on both sides but `warn` / `error` disagree. Decide which is correct and align them                                                 |
 | ➕ off in ESLint but enabled in oxlint | oxlint enables something ESLint deliberately disables. **Likely to produce reports the ESLint setup never had**                             |
 | ➕ enabled only in oxlint              | No corresponding ESLint rule. Either an oxlint-specific rule such as `oxc/*`, or a side effect of enabling whole `categories`               |
-| option differences                     | Severities agree but the written options differ. Read from the configuration sources, and **absent does not mean unhandled** (see step 3-4) |
+| option differences                     | Severities agree but the written options differ. Read from the configuration sources, and **absent does not mean unhandled** (see step 3-5) |
 | off on both sides                      | Disabled on both sides. Counts only                                                                                                         |
 
 `oxlint --rules -f json` (the binary lives at `packages/oxlint-config/node_modules/.bin/oxlint`) is the source of truth for whether oxlint supports a rule. The catalog follows the installed oxlint version, so **updating oxlint can change the verdict**.
@@ -123,7 +125,8 @@ Tell the user where the report was saved.
 | File                      | Responsibility                                                                    |
 | ------------------------- | --------------------------------------------------------------------------------- |
 | `lib/granularities.mjs`   | The granularity-to-directory table (`GRANULARITIES`)                              |
-| `lib/snapshot.mjs`        | Line oriented parser that reads `rules` / `plugins` out of a Vitest snapshot      |
+| `lib/snapshot.mjs`        | Line oriented parser that reads `rules` / `plugins` / `overrides` out of a Vitest snapshot |
+| `lib/fileScope.mjs`       | The target file, glob matching, and merging oxlint's matching `overrides`         |
 | `lib/catalog.mjs`         | The rule catalog from `oxlint --rules -f json`                                    |
 | `lib/optionSchema.mjs`    | Option defaults from `configuration_schema.json` and the three-way option verdict |
 | `lib/authoredOptions.mjs` | Collects the options as written in the configuration sources                      |
@@ -137,5 +140,6 @@ Tell the user where the report was saved.
 - Vitest snapshots cannot be `JSON.parse`d, because `pretty-format` leaves quotes inside strings unescaped (for example `"input[type="image"]"`). The parser relies on `pretty-format`'s deterministic layout — two space indentation, trailing commas — and never uses `eval`
 - `SCOPE_MAP` is the single source of truth for name conversion. Candidates are generated in priority order and resolved as **present in the resolved oxlint config → present in the catalog → the first candidate**, which absorbs scope drift such as `react-hooks/*` → `react/*` and `jest/*` ↔ `vitest/*`
 - Severities are normalised to `off` / `warn` / `error` from ESLint's `0` / `1` / `2` and oxlint's `allow` / `warn` / `deny`
-- Whether a rule is enabled, and at which severity, comes from the snapshots (file scoping is already resolved there, so they are accurate). **Options alone cannot be judged from the snapshots**, so `eslint.config.mjs` / `oxlint.config.ts` are imported and their `extends` chains walked, merging later definitions over earlier ones, to compare the options as written. Object key order is ignored (`stableStringify`)
+- **Both sides are resolved for one file — the `const filePath = '...'` in the ESLint side's `snapshot.test.mts`.** ESLint's snapshot is already flattened for that file by `calculateConfigForFile()`, but oxlint's `--print-config` is not: it emits the root `rules` (the raw `categories` expansion) next to an `overrides[]` array. `lib/fileScope.mjs` matches those `overrides` against the target file and merges them in declaration order. This cannot be skipped — `src/rules/*.ts` author entire rule sets inside `overrides[]`, so reading only the root `rules` reports every rule at its category severity and every option as unwritten
+- Whether a rule is enabled, and at which severity, comes from the snapshots, **after the `overrides` merge above**. **Options alone cannot be judged from the snapshots**, so `eslint.config.mjs` / `oxlint.config.ts` are imported and their `extends` chains walked (following `overrides` that match the target file), merging later definitions over earlier ones, to compare the options as written. Object key order is ignored (`stableStringify`)
 - The option verdict uses `node_modules/oxlint/configuration_schema.json`: `definitions.OxlintRules` → `DummyRuleMap.properties[<rule>]` holds each rule's option definition as a positional tuple, and each property's `default` is oxlint's default value
