@@ -143,5 +143,8 @@ module.exports = {
     // https://typescript-eslint.io/rules/non-nullable-type-assertion-style/
     // You should use type assertion style "as" instead of non-null assertion style.
     '@typescript-eslint/non-nullable-type-assertion-style': ['off'],
+
+    // https://typescript-eslint.io/rules/no-useless-constructor
+    '@typescript-eslint/no-useless-constructor': ['off'],
   },
 };

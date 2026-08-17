@@ -613,6 +613,9 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
     "no-caller": [
       2,
     ],
+    "no-case-declarations": [
+      1,
+    ],
     "no-class-assign": [
       2,
     ],
@@ -1322,6 +1325,9 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
     "no-throw-literal": [
       2,
     ],
+    "no-unassigned-vars": [
+      2,
+    ],
     "no-undef": [
       0,
       {
@@ -1420,6 +1426,9 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
         "variables": true,
       },
     ],
+    "no-useless-assignment": [
+      2,
+    ],
     "no-useless-backreference": [
       2,
     ],
@@ -1490,8 +1499,7 @@ exports[`should match ESLint Flat Configuration snapshot: node 1`] = `
       },
     ],
     "one-var": [
-      2,
-      "never",
+      0,
     ],
     "operator-assignment": [
       2,

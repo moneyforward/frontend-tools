@@ -348,7 +348,7 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Configuration
       0,
     ],
     "@typescript-eslint/no-useless-constructor": [
-      2,
+      0,
     ],
     "@typescript-eslint/no-useless-default-assignment": [
       2,
@@ -1482,6 +1482,9 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Configuration
     "no-caller": [
       2,
     ],
+    "no-case-declarations": [
+      1,
+    ],
     "no-class-assign": [
       0,
     ],
@@ -2203,6 +2206,9 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Configuration
     "no-throw-literal": [
       0,
     ],
+    "no-unassigned-vars": [
+      2,
+    ],
     "no-undef": [
       0,
       {
@@ -2301,6 +2307,9 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Configuration
         "variables": true,
       },
     ],
+    "no-useless-assignment": [
+      2,
+    ],
     "no-useless-backreference": [
       2,
     ],
@@ -2371,8 +2380,7 @@ exports[`ESLint Configuration Snapshot Tests > should match ESLint Configuration
       },
     ],
     "one-var": [
-      2,
-      "never",
+      0,
     ],
     "operator-assignment": [
       2,
