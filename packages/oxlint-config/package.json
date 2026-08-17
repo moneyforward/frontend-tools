@@ -43,14 +43,14 @@
   "devDependencies": {
     "@frontend-tools/release-config": "workspace:*",
     "@types/node": "24.12.2",
-    "oxlint": "1.77.0",
+    "oxlint": "1.78.0",
     "oxlint-tsgolint": "7.0.2001",
     "semantic-release": "25.0.9",
     "typescript": "5.9.3",
     "vitest": "4.1.10"
   },
   "peerDependencies": {
-    "oxlint": "1.77.0",
+    "oxlint": "1.78.0",
     "oxlint-tsgolint": "7.0.2001"
   }
 }
