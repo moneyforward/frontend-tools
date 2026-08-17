@@ -444,6 +444,9 @@ exports[`should match ESLint configuration snapshot: essentials 1`] = `
     "no-caller": [
       "error",
     ],
+    "no-case-declarations": [
+      "warn",
+    ],
     "no-class-assign": [
       "error",
     ],
@@ -1086,6 +1089,9 @@ exports[`should match ESLint configuration snapshot: essentials 1`] = `
     "no-throw-literal": [
       "error",
     ],
+    "no-unassigned-vars": [
+      "error",
+    ],
     "no-undef": [
       "off",
     ],
@@ -1162,6 +1168,9 @@ exports[`should match ESLint configuration snapshot: essentials 1`] = `
     "no-use-before-define": [
       "off",
     ],
+    "no-useless-assignment": [
+      "error",
+    ],
     "no-useless-backreference": [
       "error",
     ],
@@ -1223,8 +1232,7 @@ exports[`should match ESLint configuration snapshot: essentials 1`] = `
       },
     ],
     "one-var": [
-      "error",
-      "never",
+      "off",
     ],
     "operator-assignment": [
       "error",

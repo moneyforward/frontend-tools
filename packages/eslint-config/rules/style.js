@@ -234,7 +234,7 @@ module.exports = {
 
     // allow just one var statement per function
     // https://eslint.org/docs/rules/one-var
-    'one-var': ['error', 'never'],
+    'one-var': ['off'],
 
     // require assignment operator shorthand where possible or prohibit it entirely
     // https://eslint.org/docs/rules/operator-assignment

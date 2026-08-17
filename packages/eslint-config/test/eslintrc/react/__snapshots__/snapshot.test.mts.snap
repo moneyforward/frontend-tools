@@ -272,7 +272,7 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
       "off",
     ],
     "@typescript-eslint/no-useless-constructor": [
-      "error",
+      "off",
     ],
     "@typescript-eslint/no-useless-default-assignment": [
       "error",
@@ -1370,6 +1370,9 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
     "no-caller": [
       "error",
     ],
+    "no-case-declarations": [
+      "warn",
+    ],
     "no-class-assign": [
       "off",
     ],
@@ -2021,6 +2024,9 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
     "no-throw-literal": [
       "off",
     ],
+    "no-unassigned-vars": [
+      "error",
+    ],
     "no-undef": [
       "off",
     ],
@@ -2097,6 +2103,9 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
     "no-use-before-define": [
       "off",
     ],
+    "no-useless-assignment": [
+      "error",
+    ],
     "no-useless-backreference": [
       "error",
     ],
@@ -2158,8 +2167,7 @@ exports[`should match ESLint configuration snapshot: react 1`] = `
       },
     ],
     "one-var": [
-      "error",
-      "never",
+      "off",
     ],
     "operator-assignment": [
       "error",

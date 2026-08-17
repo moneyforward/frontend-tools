@@ -75,6 +75,12 @@ module.exports = {
     // https://eslint.org/docs/rules/no-this-before-super
     'no-this-before-super': 'error',
 
+    // https://eslint.org/docs/latest/rules/no-unassigned-vars
+    'no-unassigned-vars': ['error'],
+
+    // https://eslint.org/docs/latest/rules/no-useless-assignment
+    'no-useless-assignment': ['error'],
+
     // disallow useless computed property keys
     // https://eslint.org/docs/rules/no-useless-computed-key
     'no-useless-computed-key': ['error'],

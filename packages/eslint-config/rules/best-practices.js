@@ -88,6 +88,9 @@ module.exports = {
     // https://eslint.org/docs/rules/no-caller
     'no-caller': ['error'],
 
+    // https://eslint.org/docs/rules/no-case-declarations
+    'no-case-declarations': ['warn'],
+
     // Disallow returning value in constructor
     // https://eslint.org/docs/rules/no-constructor-return
     'no-constructor-return': ['error'],
