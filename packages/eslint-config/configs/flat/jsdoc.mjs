@@ -25,7 +25,7 @@ export default [
   jsdocRuleSetTs,
 
   {
-    files: ['*.@(js|cjs|mjs)'],
+    files: ['**/*.{js,cjs,mjs}'],
     ...jsdocRuleSetJs,
   },
 ];
