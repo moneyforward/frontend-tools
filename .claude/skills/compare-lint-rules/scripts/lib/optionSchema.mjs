@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import { ruleNameAliases } from './ruleName.mjs';
 import { stableStringify } from './util.mjs';
 
 /**
@@ -56,7 +57,10 @@ export function loadOptionSchema(repoRoot) {
   return {
     resolve,
     slotsOf(rule) {
-      const tuple = properties[rule]?.anyOf?.find(
+      const definition = ruleNameAliases(rule)
+        .map((name) => properties[name])
+        .find(Boolean);
+      const tuple = definition?.anyOf?.find(
         (variant) => variant.type === 'array' && Array.isArray(variant.items),
       );
 
