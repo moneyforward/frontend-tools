@@ -19,6 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         task:
+          - lint
           - test
           - build
     steps:

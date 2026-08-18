@@ -16,6 +16,7 @@
     "dist"
   ],
   "scripts": {
+    "lint": "oxlint",
     "test": "vitest",
     "build:js": "tsc -p tsconfig.build.json",
     "build:configs-json": "node ./scripts/generateConfigsJson.js",

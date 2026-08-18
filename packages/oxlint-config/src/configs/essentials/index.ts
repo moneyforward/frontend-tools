@@ -4,6 +4,7 @@ import importRuleSet from '../../rules/import.ts';
 import promiseRuleSet from '../../rules/promise.ts';
 import unicornRuleSet from '../../rules/unicorn.ts';
 
+// oxlint-disable-next-line import/no-default-export
 export default defineConfig({
   categories: {
     correctness: 'error',
