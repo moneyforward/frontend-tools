@@ -1,10 +1,4 @@
 // @ts-check
-import {
-  essentials,
-  jsdoc,
-  next,
-  react,
-  typescript,
-} from '../../../configs/flat/index.mjs';
+import { essentials, next } from '../../../configs/flat/index.mjs';
 
-export default [...essentials, ...react, ...typescript, ...next, ...jsdoc];
+export default [...essentials, ...next];

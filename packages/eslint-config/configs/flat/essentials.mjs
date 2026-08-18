@@ -75,7 +75,7 @@ export default [
 
   unicornRuleSet,
   {
-    files: ['*.@(jsx|tsx)'],
+    files: ['**/*.{jsx,tsx}'],
     ...unicornRuleSetForReact,
   },
 ];
