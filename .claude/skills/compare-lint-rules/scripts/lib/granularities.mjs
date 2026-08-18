@@ -20,10 +20,6 @@ export const GRANULARITIES = {
     eslintDir: 'packages/eslint-config/test/flat/typescript',
     oxlintDir: 'packages/oxlint-config/src/configs/typescript',
   },
-  jsdoc: {
-    eslintDir: 'packages/eslint-config/test/flat/jsdoc',
-    oxlintDir: 'packages/oxlint-config/src/configs/jsdoc',
-  },
   nextjs: {
     eslintDir: 'packages/eslint-config/test/flat/next',
     oxlintDir: 'packages/oxlint-config/src/configs/nextjs',
