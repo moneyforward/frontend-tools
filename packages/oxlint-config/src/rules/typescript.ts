@@ -91,12 +91,14 @@ export default defineConfig({
       // for JavaScript
       // The `typescript` plugin enabled in the override above is loaded
       // globally by oxlint, so `essentials`' top-level `categories` activate
-      // type-aware rules on every file — including `.js`. The `no-unsafe-*`
-      // family fires purely because a value is `any`, which is unavoidable in
-      // untyped JavaScript without JSDoc type annotations, so disable just that
-      // family for JS. Other type-aware rules (e.g. strict-boolean-expressions,
-      // restrict-plus-operands) are satisfiable with idiomatic JS and are
-      // intentionally left on.
+      // type-aware rules on every file — including `.js`. The rules below are
+      // unsatisfiable in untyped JavaScript: the `no-unsafe-*` family and
+      // `strict-boolean-expressions` fire purely because a value is `any`, and
+      // `prefer-readonly-parameter-types` asks for `readonly` annotations that
+      // JavaScript has no syntax for. None of these can be resolved without
+      // JSDoc type annotations, so they are disabled for JS. Type-aware rules
+      // that idiomatic JS can satisfy (e.g. restrict-plus-operands,
+      // restrict-template-expressions) are intentionally left on.
       files: ['**/*.{js,cjs,mjs,jsx}'],
       rules: {
         'typescript/no-unsafe-argument': ['off'],
