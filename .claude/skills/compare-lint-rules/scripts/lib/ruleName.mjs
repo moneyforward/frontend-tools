@@ -19,7 +19,9 @@ const SCOPE_MAP = {
   jest: ['jest', 'vitest'],
   'jest-dom': [],
   jsdoc: ['jsdoc'],
-  'jsx-a11y': ['jsx-a11y'],
+  // oxlint normalises the scope to `jsx_a11y` in `--print-config` and
+  // `--rules`, even though configuration files accept the hyphenated form.
+  'jsx-a11y': ['jsx_a11y', 'jsx-a11y'],
   n: ['node'],
   node: ['node'],
   promise: ['promise'],
@@ -51,6 +53,35 @@ export function splitRuleName(rule) {
   return segments.length > 1
     ? { base: segments.slice(1).join('/'), prefix: segments[0] }
     : { base: rule, prefix: '' };
+}
+
+/**
+ * Lists the spellings a resolved oxlint rule name can take.
+ *
+ * oxlint prints `jsx_a11y/alt-text` in `--print-config` and `--rules`, but
+ * configuration files and `configuration_schema.json` keep the hyphenated
+ * `jsx-a11y/alt-text`. A lookup keyed by one spelling therefore misses entries
+ * keyed by the other, so both are tried. Only the scope is rewritten: rule names
+ * such as `alt-text` legitimately contain hyphens.
+ *
+ * @param {string} rule An oxlint rule name.
+ *
+ * @returns {string[]} The name itself first, then its scope separator variant
+ * when one exists.
+ */
+export function ruleNameAliases(rule) {
+  const slash = rule.indexOf('/');
+
+  if (slash === -1) {
+    return [rule];
+  }
+
+  const scope = rule.slice(0, slash);
+  const alias = scope.includes('_')
+    ? scope.replaceAll('_', '-')
+    : scope.replaceAll('-', '_');
+
+  return alias === scope ? [rule] : [rule, `${alias}${rule.slice(slash)}`];
 }
 
 /**

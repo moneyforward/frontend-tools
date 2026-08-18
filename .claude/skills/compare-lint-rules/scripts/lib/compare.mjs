@@ -1,7 +1,7 @@
 // @ts-check
 
 import { judgeOptionDiff } from './optionSchema.mjs';
-import { canonicalize, splitRuleName } from './ruleName.mjs';
+import { canonicalize, ruleNameAliases, splitRuleName } from './ruleName.mjs';
 import { stableStringify } from './util.mjs';
 
 /**
@@ -250,7 +250,10 @@ function diffOptions(canonical, eslintNames, authored, optionSchema) {
     eslintNames
       .map((name) => authored.eslint?.get(name))
       .find((options) => options && options.length > 0) ?? [];
-  const oxlintOptions = authored.oxlint.get(canonical) ?? [];
+  const oxlintOptions =
+    ruleNameAliases(canonical)
+      .map((name) => authored.oxlint?.get(name))
+      .find(Boolean) ?? [];
 
   if (eslintOptions.length === 0 && oxlintOptions.length === 0) {
     return null;
