@@ -42,7 +42,7 @@ export default defineConfig({
         'typescript/no-misused-promises': [
           'error',
           {
-            // Strict checks on promises with no return value are excessive. It's' extremely rare for this to cause a bug.
+            // Strict checks on promises with no return value are excessive. It's extremely rare for this to cause a bug.
             checksVoidReturn: false,
           },
         ],
