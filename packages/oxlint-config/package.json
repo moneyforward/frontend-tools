@@ -41,6 +41,10 @@
     "url": "https://github.com/moneyforward/frontend-tools/issues"
   },
   "homepage": "https://github.com/moneyforward/frontend-tools/tree/main/packages/oxlint-config#readme",
+  "dependencies": {
+    "eslint-plugin-jest-dom": "5.10.1",
+    "eslint-plugin-testing-library": "7.16.2"
+  },
   "devDependencies": {
     "@frontend-tools/release-config": "workspace:*",
     "@types/node": "24.12.2",

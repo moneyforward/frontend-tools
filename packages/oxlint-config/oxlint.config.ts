@@ -9,6 +9,7 @@ export default defineConfig({
       files: ['./src/**/*/*.ts'],
       rules: {
         'import/no-default-export': ['off'],
+        'oxc/no-rest-spread-properties': ['off'],
         'unicorn/filename-case': ['off'],
       },
     },
