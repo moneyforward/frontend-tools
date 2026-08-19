@@ -43,6 +43,7 @@
   "homepage": "https://github.com/moneyforward/frontend-tools/tree/main/packages/oxlint-config#readme",
   "dependencies": {
     "eslint-plugin-jest-dom": "5.10.1",
+    "eslint-plugin-storybook": "10.5.7",
     "eslint-plugin-testing-library": "7.16.2"
   },
   "devDependencies": {
