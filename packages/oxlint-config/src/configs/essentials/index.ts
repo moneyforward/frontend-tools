@@ -1,6 +1,7 @@
 import { defineConfig } from 'oxlint';
 import eslintRuleSet from '../../rules/eslint.ts';
 import importRuleSet from '../../rules/import.ts';
+import oxcRuleSet from '../../rules/oxc.ts';
 import promiseRuleSet from '../../rules/promise.ts';
 import unicornRuleSet from '../../rules/unicorn.ts';
 
@@ -18,6 +19,12 @@ export default defineConfig({
   env: {
     builtin: true,
   },
-  extends: [eslintRuleSet, importRuleSet, promiseRuleSet, unicornRuleSet],
+  extends: [
+    eslintRuleSet,
+    oxcRuleSet,
+    importRuleSet,
+    promiseRuleSet,
+    unicornRuleSet,
+  ],
   ignorePatterns: ['**/bin/*', '**/build/*', '**/dist/*', '**/node_modules/*'],
 });
