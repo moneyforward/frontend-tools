@@ -1,6 +1,6 @@
 ---
 name: compare-lint-rules
-description: Compares the snapshot test results of eslint-config-moneyforward and oxlint-config-moneyforward to judge, one granularity at a time, whether the oxlint rule sets map to the ESLint ones. Lists the differences (unset on the oxlint side, severity mismatches, enabled only on the oxlint side) and the rules oxlint does not support. Use when comparing essentials / typescript / nextjs / node / react / storybook / test.essentials / test.react, or when asked whether the rules are mapped or which rules oxlint cannot cover.
+description: Compares the snapshot test results of eslint-config-moneyforward and oxlint-config-moneyforward to judge, one granularity at a time, whether the oxlint rule sets map to the ESLint ones. Lists the differences (unset on the oxlint side, severity mismatches, enabled only on the oxlint side) and the rules oxlint does not support. Use when comparing essentials / typescript / jsdoc / nextjs / node / react / storybook / test.essentials / test.react, or when asked whether the rules are mapped or which rules oxlint cannot cover.
 ---
 
 # eslint-config / oxlint-config rule mapping comparison
@@ -24,6 +24,7 @@ The script warns when a snapshot is older than the configuration it captures. Th
 | ----------------------- | --------------------------------------------- | ----------------------------------------------- |
 | `essentials`            | `packages/eslint-config/test/flat/essentials` | `packages/oxlint-config/src/configs/essentials` |
 | `typescript`            | `.../test/flat/typescript`                    | `.../src/configs/typescript`                    |
+| `jsdoc`                 | `.../test/flat/jsdoc`                         | `.../src/configs/jsdoc`                         |
 | `nextjs` (alias `next`) | `.../test/flat/next`                          | `.../src/configs/nextjs`                        |
 | `node`                  | `.../test/flat/node`                          | `.../src/configs/node`                          |
 | `react`                 | `.../test/flat/react`                         | `.../src/configs/react`                         |
