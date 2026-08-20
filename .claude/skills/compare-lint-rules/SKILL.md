@@ -1,6 +1,6 @@
 ---
 name: compare-lint-rules
-description: Compares the snapshot test results of eslint-config-moneyforward and oxlint-config-moneyforward to judge, one granularity at a time, whether the oxlint rule sets map to the ESLint ones. Lists the differences (unset on the oxlint side, severity mismatches, enabled only on the oxlint side) and the rules oxlint does not support. Use when comparing essentials / typescript / nextjs / node / react / storybook / test.essentials / test.react, or when asked whether the rules are mapped or which rules oxlint cannot cover.
+description: Compares the snapshot test results of eslint-config-moneyforward and oxlint-config-moneyforward to judge, one granularity at a time, whether the oxlint rule sets map to the ESLint ones. Lists the differences (unset on the oxlint side, severity mismatches, enabled only on the oxlint side) and the rules oxlint does not support. Use when comparing essentials / typescript / jsdoc / nextjs / node / react / storybook / test.essentials / test.react, or when asked whether the rules are mapped or which rules oxlint cannot cover.
 ---
 
 # eslint-config / oxlint-config rule mapping comparison
@@ -24,6 +24,7 @@ The script warns when a snapshot is older than the configuration it captures. Th
 | ----------------------- | --------------------------------------------- | ----------------------------------------------- |
 | `essentials`            | `packages/eslint-config/test/flat/essentials` | `packages/oxlint-config/src/configs/essentials` |
 | `typescript`            | `.../test/flat/typescript`                    | `.../src/configs/typescript`                    |
+| `jsdoc`                 | `.../test/flat/jsdoc`                         | `.../src/configs/jsdoc`                         |
 | `nextjs` (alias `next`) | `.../test/flat/next`                          | `.../src/configs/nextjs`                        |
 | `node`                  | `.../test/flat/node`                          | `.../src/configs/node`                          |
 | `react`                 | `.../test/flat/react`                         | `.../src/configs/react`                         |
@@ -122,19 +123,19 @@ Tell the user where the report was saved.
 
 `scripts/compare-lint-rules.mjs` only holds the CLI — argument parsing, I/O, and exiting on error. The judgement lives in `scripts/lib/`.
 
-| File                      | Responsibility                                                                    |
-| ------------------------- | --------------------------------------------------------------------------------- |
-| `lib/granularities.mjs`   | The granularity-to-directory table (`GRANULARITIES`)                              |
+| File                      | Responsibility                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------ |
+| `lib/granularities.mjs`   | The granularity-to-directory table (`GRANULARITIES`)                                       |
 | `lib/snapshot.mjs`        | Line oriented parser that reads `rules` / `plugins` / `overrides` out of a Vitest snapshot |
-| `lib/fileScope.mjs`       | The target file, glob matching, and merging oxlint's matching `overrides`         |
-| `lib/catalog.mjs`         | The rule catalog from `oxlint --rules -f json`                                    |
-| `lib/optionSchema.mjs`    | Option defaults from `configuration_schema.json` and the three-way option verdict |
-| `lib/authoredOptions.mjs` | Collects the options as written in the configuration sources                      |
-| `lib/ruleName.mjs`        | ESLint name to oxlint name conversion (`SCOPE_MAP`, `ruleNameAliases`)            |
-| `lib/compare.mjs`         | Rule classification                                                               |
-| `lib/report.mjs`          | Markdown output                                                                   |
-| `lib/metadata.mjs`        | Snapshot freshness warnings and rule set composition                              |
-| `lib/util.mjs`            | `ComparisonError`, `stableStringify`, and friends                                 |
+| `lib/fileScope.mjs`       | The target file, glob matching, and merging oxlint's matching `overrides`                  |
+| `lib/catalog.mjs`         | The rule catalog from `oxlint --rules -f json`                                             |
+| `lib/optionSchema.mjs`    | Option defaults from `configuration_schema.json` and the three-way option verdict          |
+| `lib/authoredOptions.mjs` | Collects the options as written in the configuration sources                               |
+| `lib/ruleName.mjs`        | ESLint name to oxlint name conversion (`SCOPE_MAP`, `ruleNameAliases`)                     |
+| `lib/compare.mjs`         | Rule classification                                                                        |
+| `lib/report.mjs`          | Markdown output                                                                            |
+| `lib/metadata.mjs`        | Snapshot freshness warnings and rule set composition                                       |
+| `lib/util.mjs`            | `ComparisonError`, `stableStringify`, and friends                                          |
 
 - Expected failures (missing snapshot, missing oxlint binary, unparsable file) throw `ComparisonError`, which the CLI turns into a message on stderr and exit code 2. Nothing under `lib/` calls `process.exit`
 - Vitest snapshots cannot be `JSON.parse`d, because `pretty-format` leaves quotes inside strings unescaped (for example `"input[type="image"]"`). The parser relies on `pretty-format`'s deterministic layout — two space indentation, trailing commas — and never uses `eval`
