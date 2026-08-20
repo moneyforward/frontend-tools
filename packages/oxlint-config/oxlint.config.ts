@@ -9,8 +9,6 @@ export default defineConfig({
       files: ['./src/**/*/*.ts'],
       rules: {
         'import/no-default-export': ['off'],
-        'oxc/no-accumulating-spread': ['off'],
-        'oxc/no-rest-spread-properties': ['off'],
         'unicorn/filename-case': ['off'],
       },
     },
@@ -18,8 +16,6 @@ export default defineConfig({
       files: ['*.js'],
       rules: {
         'no-restricted-exports': ['off'],
-        'oxc/no-async-await': ['off'],
-        'oxc/no-rest-spread-properties': ['off'],
       },
     },
   ],
