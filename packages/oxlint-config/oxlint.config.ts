@@ -18,8 +18,6 @@ export default defineConfig({
       files: ['*.js'],
       rules: {
         'no-restricted-exports': ['off'],
-        'oxc/no-async-await': ['off'],
-        'oxc/no-rest-spread-properties': ['off'],
       },
     },
   ],
