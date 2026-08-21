@@ -1,6 +1,6 @@
 {
   "name": "oxlint-config-moneyforward",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Money Forward's Oxlint rules as an extensible shared config.",
   "exports": {
     ".": {
