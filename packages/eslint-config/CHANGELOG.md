@@ -1,5 +1,21 @@
 ## [eslint-config-moneyforward-v6.0.1](https://github.com/moneyforward/frontend-tools/compare/6.0.0...6.0.1) (2026-08-21)
 
+### Bug Fixes
+
+* **deps:** update dependency @next/eslint-plugin-next to v15.5.22 ([#459](https://github.com/moneyforward/frontend-tools/issues/459)) ([ab5ffd9](https://github.com/moneyforward/frontend-tools/commit/ab5ffd9c89983f8e6f4fd550db4636e546b784ea))
+* **deps:** update dependency @next/eslint-plugin-next to v16 ([#434](https://github.com/moneyforward/frontend-tools/issues/434)) ([6ff5b24](https://github.com/moneyforward/frontend-tools/commit/6ff5b24beab28d967ae8cb6d448d4d81599e39a0))
+* **deps:** update dependency eslint-import-resolver-typescript to v4.4.5 ([#477](https://github.com/moneyforward/frontend-tools/issues/477)) ([1be5c8d](https://github.com/moneyforward/frontend-tools/commit/1be5c8dee83f1809b6dbec2c8d23707981c0fc9d))
+* **deps:** update dependency eslint-plugin-jest to v29.16.0 ([#479](https://github.com/moneyforward/frontend-tools/issues/479)) ([3d3b611](https://github.com/moneyforward/frontend-tools/commit/3d3b611c25756a5a1b20a432b49689847f373402))
+* **deps:** update dependency eslint-plugin-jest-dom to v5.10.1 ([#474](https://github.com/moneyforward/frontend-tools/issues/474)) ([3d594b5](https://github.com/moneyforward/frontend-tools/commit/3d594b54b86b805832c8e1e22148c39ae668ccae))
+* **deps:** update dependency eslint-plugin-jsdoc to v64 ([#484](https://github.com/moneyforward/frontend-tools/issues/484)) ([b67feeb](https://github.com/moneyforward/frontend-tools/commit/b67feebf2d9420517173b3c0498c5f1a4beefd90))
+* **deps:** update dependency eslint-plugin-n to v18 ([#485](https://github.com/moneyforward/frontend-tools/issues/485)) ([3af90e2](https://github.com/moneyforward/frontend-tools/commit/3af90e2130629590964091a48f47ba54581fa568))
+* **deps:** update dependency eslint-plugin-promise to v7.3.0 ([#480](https://github.com/moneyforward/frontend-tools/issues/480)) ([5039381](https://github.com/moneyforward/frontend-tools/commit/5039381d448ba8c0cd142e5031475a8fd4580a59))
+* **deps:** update dependency eslint-plugin-react-hooks to v7.1.1 ([#478](https://github.com/moneyforward/frontend-tools/issues/478)) ([81e2f2f](https://github.com/moneyforward/frontend-tools/commit/81e2f2fcd314b178029b1f76d48d13d3facd2b5d))
+* **deps:** update dependency eslint-plugin-storybook to v10.5.7 ([#481](https://github.com/moneyforward/frontend-tools/issues/481)) ([e87fe68](https://github.com/moneyforward/frontend-tools/commit/e87fe68f6b9f14009ae1a8db311f8e23eeafd574))
+* **deps:** update typescript-eslint monorepo to v8.67.0 ([#483](https://github.com/moneyforward/frontend-tools/issues/483)) ([85cade5](https://github.com/moneyforward/frontend-tools/commit/85cade5a14f3b65bdf5c077932e2ae02a1e40f93))
+* **eslint-config:** fix glob path in jsdoc configuration ([#501](https://github.com/moneyforward/frontend-tools/issues/501)) ([22566a5](https://github.com/moneyforward/frontend-tools/commit/22566a50d9a62799fd1d3f3aa9a6c3d279ec5cd2))
+* **eslint-config:** update several rules ([#494](https://github.com/moneyforward/frontend-tools/issues/494)) ([54816cd](https://github.com/moneyforward/frontend-tools/commit/54816cda7fd41eb7bf9eeb4213e7e68d2e37d797))
+
 ## [eslint-config-moneyforward-v6.0.0](https://github.com/moneyforward/frontend-tools/compare/5.1.4...6.0.0) (2026-04-18)
 
 ### ⚠ BREAKING CHANGES
