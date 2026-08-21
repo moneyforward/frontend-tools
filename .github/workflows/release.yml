@@ -48,21 +48,25 @@ jobs:
       - name: Initialize
         uses: ./.github/actions/restore-node
 
+      # `--no-bail` keeps the packages independent: one failing release must not stop the others.
       - name: Release
-        run: pnpm -r --workspace-concurrency=1 release ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
+        run: pnpm -r --workspace-concurrency=1 --no-bail release ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Resolve branch name
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+        if: ${{ !cancelled() && github.event.inputs.dry_run != 'true' }}
         id: branch
         run: echo "name=chore/$(date -u +%Y%m%d)-release-packages" >> "$GITHUB_OUTPUT"
 
       # The default branch rejects direct pushes, so the version bumps and changelogs
       # generated above are handed back to `main` through a pull request.
+      #
+      # This runs even when the release step failed: a package that did publish has already
+      # been tagged, so dropping its version bump would leave the repository out of sync.
       - name: Create release pull request
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+        if: ${{ !cancelled() && github.event.inputs.dry_run != 'true' }}
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           token: ${{ steps.app-token.outputs.token }}

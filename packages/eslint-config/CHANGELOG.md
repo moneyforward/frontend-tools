@@ -1,3 +1,5 @@
+## [eslint-config-moneyforward-v6.0.1](https://github.com/moneyforward/frontend-tools/compare/6.0.0...6.0.1) (2026-08-21)
+
 ## [eslint-config-moneyforward-v6.0.0](https://github.com/moneyforward/frontend-tools/compare/5.1.4...6.0.0) (2026-04-18)
 
 ### ⚠ BREAKING CHANGES
