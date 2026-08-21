@@ -19,6 +19,11 @@
     {
       "groupName": "semantic-release family",
       "matchPackageNames": ["semantic-release", "@semantic-release/*"]
+    },
+    {
+      "description": "v10 returns its templates as functions under `writer.template`, but conventional-changelog-writer@8 - the version @semantic-release/release-notes-generator depends on - only reads Handlebars strings from `writer.mainTemplate`. The result is release notes containing nothing but the heading. Lift this once release-notes-generator ships a writer that understands v10.",
+      "matchPackageNames": ["conventional-changelog-conventionalcommits"],
+      "allowedVersions": "<10"
     }
   ]
 }
