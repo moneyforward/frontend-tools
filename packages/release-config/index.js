@@ -46,12 +46,10 @@ module.exports = {
     ],
     '@semantic-release/changelog',
     '@semantic-release/npm',
-    [
-      '@semantic-release/git',
-      {
-        assets: ['CHANGELOG.md', 'package.json'],
-      },
-    ],
+
+    // `@semantic-release/git` is intentionally omitted: the organization ruleset on the default branch
+    // requires every change to go through a pull request, so committing back to `main` is rejected.
+    // The release workflow opens a pull request with the generated `CHANGELOG.md` / `package.json` instead.
     '@semantic-release/github',
   ],
 };
