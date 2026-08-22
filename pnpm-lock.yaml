@@ -69,8 +69,8 @@ importers:
         specifier: 56.0.1
         version: 56.0.1(eslint@9.39.5(supports-color@10.2.2))
       globals:
-        specifier: 17.5.0
-        version: 17.5.0
+        specifier: 17.11.0
+        version: 17.11.0
       jest:
         specifier: '*'
         version: 30.3.0(@types/node@24.13.3)(esbuild-register@3.6.0(esbuild@0.24.2)(supports-color@10.2.2))(supports-color@10.2.2)
@@ -2641,6 +2641,7 @@ packages:
   eslint@9.39.5:
     resolution: {integrity: sha512-DgZS62aPLXKlnxILS/AYCoRvHaZeXceIzlXPkkGGzJWSow1aEk0lbTlxUSlyjC8jcaKxAdOnTDz+o1JFSBsyjw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2931,8 +2932,8 @@ packages:
     resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
     engines: {node: '>=18'}
 
-  globals@17.5.0:
-    resolution: {integrity: sha512-qoV+HK2yFl/366t2/Cb3+xxPUo5BuMynomoDmiaZBIdbs+0pYbjfZU+twLhGKp4uCZ/+NbtpVepH5bGCxRyy2g==}
+  globals@17.11.0:
+    resolution: {integrity: sha512-Z2I8hM+PbJDXQDq3Icgpzv+mPdwr68iZUU9d5WW4FuXfDUQfkZaZuvjMv42/5crNyw154+9+VWXbYrUgDXbxNw==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -8235,7 +8236,7 @@ snapshots:
 
   globals@15.11.0: {}
 
-  globals@17.5.0: {}
+  globals@17.11.0: {}
 
   globalthis@1.0.4:
     dependencies:
