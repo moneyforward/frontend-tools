@@ -1,0 +1,43 @@
+name: Check package
+
+description: Run a pnpm task for one workspace package, skipping when that package is untouched
+
+inputs:
+  package:
+    description: Directory name under `packages/`
+    required: true
+  task:
+    description: pnpm script to run
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    # The calling workflow deliberately carries no `paths` filter: these jobs are required status
+    # checks, and a filtered workflow that never runs leaves the check permanently "expected",
+    # which blocks the pull request forever. The filtering happens here instead, so the check run
+    # still reports success on an unrelated pull request — it just does no work.
+    - name: Detect changes
+      id: changes
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        if gh api "repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files" \
+             --paginate --jq '.[].filename' \
+           | grep -q "^packages/${{ inputs.package }}/"; then
+          echo 'matched=true' >> "$GITHUB_OUTPUT"
+        else
+          echo "::notice::No changes under packages/${{ inputs.package }}/, skipping ${{ inputs.task }}."
+          echo 'matched=false' >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Initialize
+      if: steps.changes.outputs.matched == 'true'
+      uses: ./.github/actions/restore-node
+
+    - name: Run ${{ inputs.task }}
+      if: steps.changes.outputs.matched == 'true'
+      shell: bash
+      working-directory: packages/${{ inputs.package }}
+      run: pnpm ${{ inputs.task }}
