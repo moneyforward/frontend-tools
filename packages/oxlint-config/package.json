@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@frontend-tools/release-config": "workspace:*",
-    "@types/node": "24.12.2",
+    "@types/node": "24.13.3",
     "oxlint": "1.78.0",
     "oxlint-tsgolint": "7.0.2001",
     "semantic-release": "25.0.9",
