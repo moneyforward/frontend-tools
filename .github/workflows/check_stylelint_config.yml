@@ -1,20 +1,18 @@
 name: Check stylelint-config
 
+# No `paths` filter: these jobs are required status checks, and a filtered workflow that never
+# runs leaves the check permanently "expected", which blocks the pull request forever.
+# `check-package` skips the work when the package is untouched.
 on:
   pull_request:
     branches:
       - "*"
-    paths:
-      - "packages/stylelint-config/**"
 
 jobs:
-  check:
+  # The job id is the check-run name. It has to be unique across the three package workflows,
+  # otherwise a required `check (lint)` cannot tell one package from another.
+  stylelint-config:
     runs-on: ubuntu-latest
-    env:
-      WORKING_DIRECTORY: packages/stylelint-config
-    defaults:
-      run:
-        working-directory: ${{ env.WORKING_DIRECTORY }}
     strategy:
       fail-fast: false
       matrix:
@@ -26,10 +24,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Initialize
-        uses: ./.github/actions/restore-node
+      - uses: ./.github/actions/check-package
         with:
-          working_directory: ${{ env.WORKING_DIRECTORY }}
-
-      - name: Run ${{ matrix.task }}
-        run: pnpm ${{ matrix.task }}
+          package: stylelint-config
+          task: ${{ matrix.task }}
