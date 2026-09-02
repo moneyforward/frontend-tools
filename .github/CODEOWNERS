@@ -30,5 +30,7 @@
 # - You can ask your "Quality Controller" to review and approve your work by writing `* @moneyforward/hoge_reviewers`.
 # - To add or remove "Quality Controller", please ask "Head of Development".
 # - "Head of Development" is the github team maintainer of "Quality Controller".
-
-* @moneyforward/mf-tsd-admin @moneyforward/mf-web-frontend-committee-admin @moneyforward/mf-frontend-forward-admin
+#
+# - @moneyforward/mf-tsd-admin delegates its review authority to the path-specific reviewer teams below,
+#   and is excluded from automatic review request assignment.
+* @moneyforward/mf-web-frontend-committee-admin @moneyforward/mf-frontend-forward-admin
