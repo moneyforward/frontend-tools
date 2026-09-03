@@ -20,7 +20,7 @@
 # - If you want to change "Head of Development", please create a pull request rewriting "Head of Development" line in this file and merge it after getting approval from "Person Responsible for Overseeing Development".
 # - Please also make changes the github team maintainer of "Quality Controller" for this product at the same time.
 # - "Head of Development" should join the Slack channel where notifications about the creation of pull requests for this repository will appear.
-/.github/CODEOWNERS @wata-gh
+/.github/CODEOWNERS @wata-gh @chrismcmf
 #
 # Quality Controller (品質管理担当者)
 # @moneyforward/mf-tsd-admin
