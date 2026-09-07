@@ -151,7 +151,7 @@ exports[`typescript > should match oxlint config snapshot 1`] = `
             "error-handling-correctness-only",
           ],
         ],
-        "typescript/strict-boolean-expressions": "warn",
+        "typescript/strict-boolean-expressions": "allow",
         "typescript/strict-void-return": "allow",
       },
     },
