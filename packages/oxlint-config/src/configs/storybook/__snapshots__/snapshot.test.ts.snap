@@ -67,6 +67,7 @@ exports[`storybook > should match oxlint config snapshot 1`] = `
       "plugins": null,
       "rules": {
         "import/no-default-export": "allow",
+        "react/only-export-components": "allow",
         "storybook/no-uninstalled-addons": "deny",
       },
     },

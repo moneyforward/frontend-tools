@@ -83,7 +83,7 @@ export default defineConfig({
           },
         ],
         'typescript/return-await': ['error', 'error-handling-correctness-only'],
-        'typescript/strict-boolean-expressions': ['warn'],
+        'typescript/strict-boolean-expressions': ['off'],
         'typescript/strict-void-return': ['off'],
       },
     },
