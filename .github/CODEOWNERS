@@ -20,14 +20,17 @@
 # - If you want to change "Head of Development", please create a pull request rewriting "Head of Development" line in this file and merge it after getting approval from "Person Responsible for Overseeing Development".
 # - Please also make changes the github team maintainer of "Quality Controller" for this product at the same time.
 # - "Head of Development" should join the Slack channel where notifications about the creation of pull requests for this repository will appear.
+/.github/CODEOWNERS @wata-gh @chrismcmf
 #
 # Quality Controller (品質管理担当者)
-* @moneyforward/oss-frontend 
+# @moneyforward/mf-tsd-admin
 #
 # - For various audit compliance purposes, "Quality Controller" is managed on GitHub Team.
 # - A GitHub Team just for the purpose of managing "Quality Controller", separate from the regular developer team.
 # - You can ask your "Quality Controller" to review and approve your work by writing `* @moneyforward/hoge_reviewers`.
 # - To add or remove "Quality Controller", please ask "Head of Development".
 # - "Head of Development" is the github team maintainer of "Quality Controller".
-
-* @moneyforward/mf-tsd-admin @moneyforward/mf-web-frontend-committee-admin @moneyforward/mf-frontend-forward-admin
+#
+# - @moneyforward/mf-tsd-admin delegates its review authority to the path-specific reviewer teams below,
+#   and is excluded from automatic review request assignment.
+* @moneyforward/mf-web-frontend-committee-admin @moneyforward/mf-frontend-forward-admin
