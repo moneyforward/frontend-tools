@@ -53,7 +53,7 @@
     "oxlint-tsgolint": "7.0.2001",
     "semantic-release": "25.0.9",
     "typescript": "5.9.3",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   },
   "peerDependencies": {
     "oxlint": "^1.78.0",
