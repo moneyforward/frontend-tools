@@ -30,10 +30,10 @@
 # - To add or remove "Quality Controller", please ask "Head of Development".
 # - "Head of Development" is the github team maintainer of "Quality Controller".
 #
-# - @moneyforward/mf-tsd-admin delegates its review authority to @moneyforward/mf-web-frontend-committee-admin,
-#   and is excluded from automatic review request assignment.
+# - @moneyforward/mf-tsd-admin delegates its review authority to @moneyforward/mf-web-frontend-committee-admin
+#   and @moneyforward/oss-frontend, and is excluded from automatic review request assignment.
 
-* @moneyforward/mf-web-frontend-committee-admin
+* @moneyforward/mf-web-frontend-committee-admin @moneyforward/oss-frontend
 
 # Keep this rule below `*`: the last matching pattern takes precedence.
-/.github/CODEOWNERS @wata-gh @chrismcmf @moneyforward/mf-web-frontend-committee-admin
+/.github/CODEOWNERS @wata-gh @chrismcmf @moneyforward/mf-web-frontend-committee-admin @moneyforward/oss-frontend
