@@ -1,3 +1,9 @@
+## [oxlint-config-moneyforward-v1.1.0](https://github.com/moneyforward/frontend-tools/compare/oxlint-config-moneyforward-v1.0.0...oxlint-config-moneyforward-v1.1.0) (2026-09-11)
+
+### Features
+
+* **oxlint-config:** adjust rule settings surfaced by dogfooding ([#527](https://github.com/moneyforward/frontend-tools/issues/527)) ([58ca1b0](https://github.com/moneyforward/frontend-tools/commit/58ca1b089bccd3ec140f1208c992c97e00849945)), closes [#522](https://github.com/moneyforward/frontend-tools/issues/522) [#523](https://github.com/moneyforward/frontend-tools/issues/523)
+
 ## oxlint-config-moneyforward-v1.0.0 (2026-08-21)
 
 ### Features

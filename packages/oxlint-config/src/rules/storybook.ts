@@ -32,6 +32,7 @@ const config: OxlintConfig = defineConfig({
       files: ['**/.storybook/**/*.*'],
       rules: {
         'import/no-default-export': ['off'],
+        'react/only-export-components': ['off'],
         'storybook/no-uninstalled-addons': ['error'],
       },
     },

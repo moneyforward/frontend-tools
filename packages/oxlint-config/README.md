@@ -1,5 +1,6 @@
 # oxlint-config-moneyforward
 
+[![Version](https://img.shields.io/npm/v/oxlint-config-moneyforward.svg?style=flat-square)](https://www.npmjs.com/package/oxlint-config-moneyforward?activeTab=versions)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 The Oxlint rules of Money Forward, Inc as an extensible shared config.

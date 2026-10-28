@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/moneyforward/frontend-tools/tree/main/packages/eslint-config#readme",
   "dependencies": {
-    "@next/eslint-plugin-next": "16.3.0",
+    "@next/eslint-plugin-next": "16.4.3",
     "@typescript-eslint/eslint-plugin": "8.67.0",
     "@typescript-eslint/parser": "8.67.0",
     "confusing-browser-globals": "1.0.11",
@@ -74,7 +74,7 @@
     "eslint": "9.39.5",
     "semantic-release": "25.0.9",
     "typescript": "5.9.3",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   },
   "peerDependencies": {
     "eslint": "^8.57.0 || ^9.0.0",
