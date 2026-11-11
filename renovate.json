@@ -8,14 +8,14 @@
   "timezone": "Asia/Tokyo",
   "labels": ["dependencies"],
   "schedule": ["before 4am on the first day of the month"],
-  "minor": {
-    "automerge": true
-  },
-  "patch": {
-    "automerge": true
-  },
+  "automerge": true,
 
   "packageRules": [
+    {
+      "description": "A major update can change the rules these configs ship, which the snapshot tests do not always catch. Keep merging them by hand.",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
     {
       "groupName": "semantic-release family",
       "matchPackageNames": ["semantic-release", "@semantic-release/*"]
