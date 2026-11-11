@@ -9,6 +9,9 @@
   "labels": ["dependencies"],
   "schedule": ["before 4am on the first day of the month"],
   "automerge": true,
+  "gitIgnoredAuthors": [
+    "170394295+oss-frontend-github-app[bot]@users.noreply.github.com"
+  ],
 
   "packageRules": [
     {
